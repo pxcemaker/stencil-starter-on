@@ -30,6 +30,10 @@ export namespace Components {
     interface SlHeader {
         "slDarkMode": boolean;
     }
+    interface SlHeroSection {
+    }
+    interface SlImgGallery {
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -56,11 +60,25 @@ declare global {
         prototype: HTMLSlHeaderElement;
         new (): HTMLSlHeaderElement;
     };
+    interface HTMLSlHeroSectionElement extends Components.SlHeroSection, HTMLStencilElement {
+    }
+    var HTMLSlHeroSectionElement: {
+        prototype: HTMLSlHeroSectionElement;
+        new (): HTMLSlHeroSectionElement;
+    };
+    interface HTMLSlImgGalleryElement extends Components.SlImgGallery, HTMLStencilElement {
+    }
+    var HTMLSlImgGalleryElement: {
+        prototype: HTMLSlImgGalleryElement;
+        new (): HTMLSlImgGalleryElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "my-component": HTMLMyComponentElement;
         "sl-flip-card": HTMLSlFlipCardElement;
         "sl-header": HTMLSlHeaderElement;
+        "sl-hero-section": HTMLSlHeroSectionElement;
+        "sl-img-gallery": HTMLSlImgGalleryElement;
     }
 }
 declare namespace LocalJSX {
@@ -88,11 +106,17 @@ declare namespace LocalJSX {
     interface SlHeader {
         "slDarkMode"?: boolean;
     }
+    interface SlHeroSection {
+    }
+    interface SlImgGallery {
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-component": MyComponent;
         "sl-flip-card": SlFlipCard;
         "sl-header": SlHeader;
+        "sl-hero-section": SlHeroSection;
+        "sl-img-gallery": SlImgGallery;
     }
 }
 export { LocalJSX as JSX };
@@ -103,6 +127,8 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "sl-flip-card": LocalJSX.SlFlipCard & JSXBase.HTMLAttributes<HTMLSlFlipCardElement>;
             "sl-header": LocalJSX.SlHeader & JSXBase.HTMLAttributes<HTMLSlHeaderElement>;
+            "sl-hero-section": LocalJSX.SlHeroSection & JSXBase.HTMLAttributes<HTMLSlHeroSectionElement>;
+            "sl-img-gallery": LocalJSX.SlImgGallery & JSXBase.HTMLAttributes<HTMLSlImgGalleryElement>;
         }
     }
 }
