@@ -24,6 +24,9 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SlFlipCard {
+        "slTurnable": boolean;
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -38,9 +41,16 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSlFlipCardElement extends Components.SlFlipCard, HTMLStencilElement {
+    }
+    var HTMLSlFlipCardElement: {
+        prototype: HTMLSlFlipCardElement;
+        new (): HTMLSlFlipCardElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "my-component": HTMLMyComponentElement;
+        "sl-flip-card": HTMLSlFlipCardElement;
     }
 }
 declare namespace LocalJSX {
@@ -62,9 +72,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SlFlipCard {
+        "slTurnable"?: boolean;
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-component": MyComponent;
+        "sl-flip-card": SlFlipCard;
     }
 }
 export { LocalJSX as JSX };
@@ -73,6 +87,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "sl-flip-card": LocalJSX.SlFlipCard & JSXBase.HTMLAttributes<HTMLSlFlipCardElement>;
         }
     }
 }
