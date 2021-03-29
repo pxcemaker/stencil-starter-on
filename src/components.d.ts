@@ -27,6 +27,9 @@ export namespace Components {
     interface SlFlipCard {
         "slTurnable": boolean;
     }
+    interface SlHeader {
+        "slDarkMode": boolean;
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -47,10 +50,17 @@ declare global {
         prototype: HTMLSlFlipCardElement;
         new (): HTMLSlFlipCardElement;
     };
+    interface HTMLSlHeaderElement extends Components.SlHeader, HTMLStencilElement {
+    }
+    var HTMLSlHeaderElement: {
+        prototype: HTMLSlHeaderElement;
+        new (): HTMLSlHeaderElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "my-component": HTMLMyComponentElement;
         "sl-flip-card": HTMLSlFlipCardElement;
+        "sl-header": HTMLSlHeaderElement;
     }
 }
 declare namespace LocalJSX {
@@ -75,10 +85,14 @@ declare namespace LocalJSX {
     interface SlFlipCard {
         "slTurnable"?: boolean;
     }
+    interface SlHeader {
+        "slDarkMode"?: boolean;
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-component": MyComponent;
         "sl-flip-card": SlFlipCard;
+        "sl-header": SlHeader;
     }
 }
 export { LocalJSX as JSX };
@@ -88,6 +102,7 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "sl-flip-card": LocalJSX.SlFlipCard & JSXBase.HTMLAttributes<HTMLSlFlipCardElement>;
+            "sl-header": LocalJSX.SlHeader & JSXBase.HTMLAttributes<HTMLSlHeaderElement>;
         }
     }
 }
