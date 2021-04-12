@@ -10,6 +10,9 @@ export namespace Components {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
     }
+    interface MyAccord {
+        "titelAccord": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -32,6 +35,12 @@ declare global {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
     };
+    interface HTMLMyAccordElement extends Components.MyAccord, HTMLStencilElement {
+    }
+    var HTMLMyAccordElement: {
+        prototype: HTMLMyAccordElement;
+        new (): HTMLMyAccordElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -40,6 +49,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
+        "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -47,6 +57,10 @@ declare namespace LocalJSX {
     interface ExampleComponent {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
+    }
+    interface MyAccord {
+        "onOpenAccord"?: (event: CustomEvent<string>) => void;
+        "titelAccord"?: string;
     }
     interface MyComponent {
         /**
@@ -64,6 +78,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
+        "my-accord": MyAccord;
         "my-component": MyComponent;
     }
 }
@@ -72,6 +87,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
+            "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

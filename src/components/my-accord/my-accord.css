@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+h2{
+  font-size: 30px;
+  color: blueviolet;
+}
+
+.cool
+{
+color: burlywood;
+padding: 10 10 10 10px;
+}
+:host>button
+{
+color: rgb(222, 135, 210);
+padding: 10 10 10 10px;
+}
