@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default     |
-| ------------- | -------------- | ----------- | -------- | ----------- |
-| `titelAccord` | `titel-accord` |             | `string` | `undefined` |
+| Property      | Attribute      | Description | Type     | Default |
+| ------------- | -------------- | ----------- | -------- | ------- |
+| `titelAccord` | `titel-accord` |             | `string` | `""`    |
 
 
 ## Events

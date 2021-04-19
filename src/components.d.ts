@@ -27,6 +27,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyGallery {
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -47,10 +49,17 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyGalleryElement extends Components.MyGallery, HTMLStencilElement {
+    }
+    var HTMLMyGalleryElement: {
+        prototype: HTMLMyGalleryElement;
+        new (): HTMLMyGalleryElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
+        "my-gallery": HTMLMyGalleryElement;
     }
 }
 declare namespace LocalJSX {
@@ -76,10 +85,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyGallery {
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
         "my-component": MyComponent;
+        "my-gallery": MyGallery;
     }
 }
 export { LocalJSX as JSX };
@@ -89,6 +101,7 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
         }
     }
 }
