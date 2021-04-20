@@ -9,7 +9,7 @@
   grid-template-columns: 1fr 2fr;
 	grid-gap: 10px;
   margin-bottom: 15px;
-  border-bottom: 10px solid rgb(7, 62, 7);
+  border-bottom: 10px solid green;
 }
 
 .animal-card button {
@@ -21,9 +21,19 @@
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 8px;
 }
 
 .animal-card img{
   width: 150px;
   height: 150px;
+}
+
+.info,h3{
+  margin-left: 10px;
+}
+
+h3{
+  color: green;
 }

@@ -33,7 +33,7 @@ export namespace Components {
         "age": Number;
         "animal": String;
         "habitat": String;
-        "toggleInfo": () => Promise<void>;
+        "image": String;
         "weight": String;
     }
 }
@@ -105,6 +105,7 @@ declare namespace LocalJSX {
         "age"?: Number;
         "animal"?: String;
         "habitat"?: String;
+        "image"?: String;
         "weight"?: String;
     }
     interface IntrinsicElements {
