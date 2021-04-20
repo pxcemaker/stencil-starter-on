@@ -7,7 +7,11 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class TestComponent {
   @Prop() animal:String="Giraffe"
-  @Prop() infoText:String="kejbfjkwnlnfjkwenfkjwnfjkwenfkjwenfkjnwkjefnjkewfn ewfjnwfejknwfjwnf"
+  @Prop() age:Number=23;
+  @Prop() habitat:String="mountains"
+  @Prop() weight:String="12 kg"
+
+  
 
   render() {
     return (
@@ -17,7 +21,9 @@ export class TestComponent {
           <div>
              <h3>{this.animal}</h3>
             <div class="info">
-              <p>{this.infoText}</p>
+              <p>{this.age}</p>
+              <p>{this.habitat}</p>
+              <p>{this.weight}</p>
             </div>
             <button id="toggle-info">Show Info</button>
           </div>
