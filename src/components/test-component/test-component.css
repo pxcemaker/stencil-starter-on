@@ -1,3 +1,29 @@
 :host {
   display: block;
 }
+
+.animal-card{
+  background-color: rgb(233, 233, 233);
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+	grid-gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 10px solid rgb(7, 62, 7);
+}
+
+.animal-card button {
+    cursor: pointer;
+    background-color: #ffffff; 
+    border:0;
+    color: rgb(0, 0, 0);
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.animal-card img{
+  width: 150px;
+  height: 150px;
+}

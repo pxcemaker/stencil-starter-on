@@ -31,7 +31,7 @@ export namespace Components {
     }
     interface TestComponent {
         "animal": String;
-        "infotext": String;
+        "infoText": String;
     }
 }
 declare global {
@@ -100,7 +100,7 @@ declare namespace LocalJSX {
     }
     interface TestComponent {
         "animal"?: String;
-        "infotext"?: String;
+        "infoText"?: String;
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;

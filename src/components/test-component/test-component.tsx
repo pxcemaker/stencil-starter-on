@@ -6,8 +6,8 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class TestComponent {
-  @Prop() animal:String;
-  @Prop() infotext:String;
+  @Prop() animal:String="Giraffe"
+  @Prop() infoText:String="kejbfjkwnlnfjkwenfkjwnfjkwenfkjwenfkjnwkjefnjkewfn ewfjnwfejknwfjwnf"
 
   render() {
     return (
@@ -15,9 +15,9 @@ export class TestComponent {
         <div class="animal-card">
           <img ></img>
           <div>
-            <h3></h3>
+             <h3>{this.animal}</h3>
             <div class="info">
-              <p>Beschreibung</p>
+              <p>{this.infoText}</p>
             </div>
             <button id="toggle-info">Show Info</button>
           </div>
