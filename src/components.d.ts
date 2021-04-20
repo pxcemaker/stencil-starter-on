@@ -30,6 +30,8 @@ export namespace Components {
     interface MyGallery {
     }
     interface TestComponent {
+        "animal": String;
+        "infotext": String;
     }
 }
 declare global {
@@ -97,6 +99,8 @@ declare namespace LocalJSX {
     interface MyGallery {
     }
     interface TestComponent {
+        "animal"?: String;
+        "infotext"?: String;
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
