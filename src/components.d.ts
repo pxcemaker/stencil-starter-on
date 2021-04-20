@@ -29,6 +29,8 @@ export namespace Components {
     }
     interface MyGallery {
     }
+    interface TestComponent {
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -55,11 +57,18 @@ declare global {
         prototype: HTMLMyGalleryElement;
         new (): HTMLMyGalleryElement;
     };
+    interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
+    }
+    var HTMLTestComponentElement: {
+        prototype: HTMLTestComponentElement;
+        new (): HTMLTestComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
         "my-gallery": HTMLMyGalleryElement;
+        "test-component": HTMLTestComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -87,11 +96,14 @@ declare namespace LocalJSX {
     }
     interface MyGallery {
     }
+    interface TestComponent {
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
         "my-component": MyComponent;
         "my-gallery": MyGallery;
+        "test-component": TestComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -102,6 +114,7 @@ declare module "@stencil/core" {
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
+            "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
         }
     }
 }
