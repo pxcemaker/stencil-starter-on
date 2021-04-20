@@ -33,6 +33,7 @@ export namespace Components {
         "age": Number;
         "animal": String;
         "habitat": String;
+        "toggleInfo": () => Promise<void>;
         "weight": String;
     }
 }
