@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop,  Listen ,Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop,  Listen ,Event, EventEmitter, Element } from '@stencil/core';
 
 @Component({
   tag: 'my-accord',
@@ -6,9 +6,11 @@ import { Component, Host, h, Prop,  Listen ,Event, EventEmitter } from '@stencil
   shadow: true,
 })
 export class MyAccord {
-  @Prop() titelAccord: string ="";
+  @Prop() titelAccord: string ="ACHTUNG";
 
-  @Event() openAccord: EventEmitter<string>;
+  @Event({eventName:"openaccord"}) openAccord: EventEmitter<string>;
+
+  @Element() el: HTMLElement
  
     @Listen("click")
   wurdeGelickt1(){
@@ -17,9 +19,11 @@ export class MyAccord {
   exampleHandler2(ev: MouseEvent) {
     console.log("es springt hier rein aber funkt net")
     console.log(ev)
-    let acc = document.querySelector('accordion')
-    acc.classList.replace("accordion", "active")
-    this.openAccord.emit("custom value");
+    const target = ev.target as HTMLElement
+    let acc = target
+    .closest<HTMLDivElement>(".accordion")
+    acc.classList.add("test")
+    this.openAccord.emit("test")
     
   }
   

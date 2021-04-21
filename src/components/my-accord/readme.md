@@ -7,16 +7,16 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default |
-| ------------- | -------------- | ----------- | -------- | ------- |
-| `titelAccord` | `titel-accord` |             | `string` | `""`    |
+| Property      | Attribute      | Description | Type     | Default     |
+| ------------- | -------------- | ----------- | -------- | ----------- |
+| `titelAccord` | `titel-accord` |             | `string` | `"ACHTUNG"` |
 
 
 ## Events
 
 | Event        | Description | Type                  |
 | ------------ | ----------- | --------------------- |
-| `openAccord` |             | `CustomEvent<string>` |
+| `openaccord` |             | `CustomEvent<string>` |
 
 
 ----------------------------------------------

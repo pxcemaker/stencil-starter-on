@@ -27,6 +27,9 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyCookies {
+        "titel": string;
+    }
     interface MyGallery {
     }
 }
@@ -49,6 +52,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyCookiesElement extends Components.MyCookies, HTMLStencilElement {
+    }
+    var HTMLMyCookiesElement: {
+        prototype: HTMLMyCookiesElement;
+        new (): HTMLMyCookiesElement;
+    };
     interface HTMLMyGalleryElement extends Components.MyGallery, HTMLStencilElement {
     }
     var HTMLMyGalleryElement: {
@@ -59,6 +68,7 @@ declare global {
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
+        "my-cookies": HTMLMyCookiesElement;
         "my-gallery": HTMLMyGalleryElement;
     }
 }
@@ -68,7 +78,7 @@ declare namespace LocalJSX {
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
     }
     interface MyAccord {
-        "onOpenAccord"?: (event: CustomEvent<string>) => void;
+        "onOpenaccord"?: (event: CustomEvent<string>) => void;
         "titelAccord"?: string;
     }
     interface MyComponent {
@@ -85,12 +95,16 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyCookies {
+        "titel"?: string;
+    }
     interface MyGallery {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
         "my-component": MyComponent;
+        "my-cookies": MyCookies;
         "my-gallery": MyGallery;
     }
 }
@@ -101,6 +115,7 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-cookies": LocalJSX.MyCookies & JSXBase.HTMLAttributes<HTMLMyCookiesElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
         }
     }
