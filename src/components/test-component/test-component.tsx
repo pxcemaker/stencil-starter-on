@@ -16,22 +16,25 @@ export class TestComponent {
   @Element() el :HTMLElement;
 
   
-  /*showInfo:Boolean=false;
+ 
 
 
   toggleInfo() {
 
-    const info = document.querySelector('.info');
-    const toggleBtn = document.querySelector('#toggle-info');
+    console.log("hallohallo");
 
-    if(this.showInfo) {
+    /*let showInfo:Boolean=false;
+    let info = this.el.querySelector('.info');
+    let toggleBtn = this.el.querySelector('#toggle-info');
+
+    if(showInfo) {
       info.style.display = 'block';
       toggleBtn.innerText = 'Hide Info';
     } else {
       info.style.display = 'none';
       toggleBtn.innerText = 'Show Info';
-    }
-  }*/
+    }*/
+  }
 
 
   
@@ -48,7 +51,7 @@ export class TestComponent {
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
               <p><strong>Gewicht: </strong>{this.weight}</p>
             </div>
-            <button id="toggle-info">Show Info</button>
+            <button id="toggle-info" onClick={this.toggleInfo}>Show Info</button>
           </div>
         </div>
       </Host>
