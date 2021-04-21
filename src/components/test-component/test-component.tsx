@@ -1,21 +1,23 @@
-import { Component, Host, h, Prop} from '@stencil/core';
+import { Component, Host, h, Prop, Element, getAssetPath} from '@stencil/core';
 
 @Component({
   tag: 'test-component',
   styleUrl: 'test-component.css',
   shadow: true,
+  assetsDirs:["assets"],
 })
 export class TestComponent {
-  @Prop() image:String="../images/Braunbaer.jpg"
-  @Prop() animal:String="Giraffe"
+  @Prop() image:String="Braunbaer.jpg"
+  @Prop() animal:String="Braunbär"
   @Prop() age:Number=23;
   @Prop() habitat:String="mountains"
   @Prop() weight:String="12 kg"
 
+  @Element() el :HTMLElement;
+
   
   /*showInfo:Boolean=false;
 
-  @Method()
 
   toggleInfo() {
 
@@ -38,7 +40,7 @@ export class TestComponent {
     return (
       <Host>
         <div class="animal-card">
-          <img src="{this.image}" alt="{this.animal}"/>
+          <img src= {getAssetPath(` ./assets/${this.image}`)} alt="test"/>
           <div>
              <h3>{this.animal}</h3>
             <div class="info">

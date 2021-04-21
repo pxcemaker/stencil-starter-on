@@ -9,6 +9,7 @@
   grid-template-columns: 1fr 2fr;
 	grid-gap: 10px;
   margin-bottom: 15px;
+  margin-top: 15px;
   border-bottom: 10px solid green;
 }
 
@@ -28,6 +29,7 @@
 .animal-card img{
   width: 150px;
   height: 150px;
+  margin: 10px;
 }
 
 .info,h3{
