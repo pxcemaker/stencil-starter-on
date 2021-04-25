@@ -1,3 +1,11 @@
 :host {
   display: block;
 }
+
+.star-rating label{
+  color: #ccc;
+  cursor: pointer;
+}
+.star-rating :checked ~ label {
+  color:rgb(228, 170, 46);
+}
