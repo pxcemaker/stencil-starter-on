@@ -16,25 +16,18 @@ export class TestComponent {
   @Element() el :HTMLElement;
 
   
- 
 
 
-  toggleInfo() {
+  hideInfo() {
 
     console.log("hallohallo");
 
-    /*let showInfo:Boolean=false;
-    let info = this.el.querySelector('.info');
-    let toggleBtn = this.el.querySelector('#toggle-info');
-
-    if(showInfo) {
-      info.style.display = 'block';
-      toggleBtn.innerText = 'Hide Info';
-    } else {
-      info.style.display = 'none';
-      toggleBtn.innerText = 'Show Info';
-    }*/
+    let info = this.el.querySelector<HTMLDivElement>(".info");
+    info.classList.add(".hide");
+    
   }
+
+
 
 
   
@@ -51,7 +44,7 @@ export class TestComponent {
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
               <p><strong>Gewicht: </strong>{this.weight}</p>
             </div>
-            <button id="toggle-info" onClick={this.toggleInfo}>Show Info</button>
+            <button id="toggle-info" onMouseOver={this.hideInfo} >Show Info</button>
           </div>
         </div>
       </Host>

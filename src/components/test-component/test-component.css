@@ -39,3 +39,7 @@
 h3{
   color: green;
 }
+
+.hide{
+  visibility: hidden;
+}

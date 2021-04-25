@@ -29,6 +29,8 @@ export namespace Components {
     }
     interface MyGallery {
     }
+    interface StarRating {
+    }
     interface TestComponent {
         "age": Number;
         "animal": String;
@@ -62,6 +64,12 @@ declare global {
         prototype: HTMLMyGalleryElement;
         new (): HTMLMyGalleryElement;
     };
+    interface HTMLStarRatingElement extends Components.StarRating, HTMLStencilElement {
+    }
+    var HTMLStarRatingElement: {
+        prototype: HTMLStarRatingElement;
+        new (): HTMLStarRatingElement;
+    };
     interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
     }
     var HTMLTestComponentElement: {
@@ -73,6 +81,7 @@ declare global {
         "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
         "my-gallery": HTMLMyGalleryElement;
+        "star-rating": HTMLStarRatingElement;
         "test-component": HTMLTestComponentElement;
     }
 }
@@ -101,6 +110,9 @@ declare namespace LocalJSX {
     }
     interface MyGallery {
     }
+    interface StarRating {
+        "onSternWertung"?: (event: CustomEvent<any>) => void;
+    }
     interface TestComponent {
         "age"?: Number;
         "animal"?: String;
@@ -113,6 +125,7 @@ declare namespace LocalJSX {
         "my-accord": MyAccord;
         "my-component": MyComponent;
         "my-gallery": MyGallery;
+        "star-rating": StarRating;
         "test-component": TestComponent;
     }
 }
@@ -124,6 +137,7 @@ declare module "@stencil/core" {
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
+            "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
             "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
         }
     }
