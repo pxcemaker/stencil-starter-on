@@ -9,3 +9,8 @@
 .star-rating :checked ~ label {
   color:rgb(228, 170, 46);
 }
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color:rgb(255, 217, 66);
+}
