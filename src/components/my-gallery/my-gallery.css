@@ -1,7 +1,7 @@
 .gallery {
   display: grid;
   grid-template-columns: 11% 11% 11%;
-  grid-template-rows: 168px 1fr 100px;  
+  grid-template-rows: 168px 1fr 100px;
   position: relative;
   margin: 20px;
 }
