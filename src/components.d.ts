@@ -27,6 +27,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyContact {
+    }
     interface MyCookies {
         "titel": string;
     }
@@ -52,6 +54,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyContactElement extends Components.MyContact, HTMLStencilElement {
+    }
+    var HTMLMyContactElement: {
+        prototype: HTMLMyContactElement;
+        new (): HTMLMyContactElement;
+    };
     interface HTMLMyCookiesElement extends Components.MyCookies, HTMLStencilElement {
     }
     var HTMLMyCookiesElement: {
@@ -68,6 +76,7 @@ declare global {
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
+        "my-contact": HTMLMyContactElement;
         "my-cookies": HTMLMyCookiesElement;
         "my-gallery": HTMLMyGalleryElement;
     }
@@ -95,6 +104,8 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyContact {
+    }
     interface MyCookies {
         "titel"?: string;
     }
@@ -104,6 +115,7 @@ declare namespace LocalJSX {
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
         "my-component": MyComponent;
+        "my-contact": MyContact;
         "my-cookies": MyCookies;
         "my-gallery": MyGallery;
     }
@@ -115,6 +127,7 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-cookies": LocalJSX.MyCookies & JSXBase.HTMLAttributes<HTMLMyCookiesElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
         }
