@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     | Default     |
-| ------------- | -------------- | ----------- | -------- | ----------- |
-| `titelAccord` | `titel-accord` |             | `string` | `"ACHTUNG"` |
+| Property      | Attribute      | Description | Type      | Default     |
+| ------------- | -------------- | ----------- | --------- | ----------- |
+| `check`       | `check`        |             | `boolean` | `undefined` |
+| `isopen`      | `isopen`       |             | `boolean` | `undefined` |
+| `titelAccord` | `titel-accord` |             | `string`  | `"ACHTUNG"` |
 
 
 ## Events

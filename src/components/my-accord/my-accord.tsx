@@ -1,79 +1,75 @@
-import { Component, Host, h, Prop,  Listen ,Event, EventEmitter, Element } from '@stencil/core';
+import { Component,  h, Prop,  Listen ,Event, EventEmitter, Element } from '@stencil/core';
 
 @Component({
   tag: 'my-accord',
   styleUrl: 'my-accord.css',
   shadow: true,
+
 })
 export class MyAccord {
   @Prop() titelAccord: string ="ACHTUNG";
+@Prop({
+  mutable:true,
+  reflect:true,
+})
+
+@Prop()
+isopen:boolean;
+@Prop() check:boolean;
+
 
   @Event({eventName:"openaccord"}) openAccord: EventEmitter<string>;
 
-  @Element() el: HTMLElement
+  @Element() myaccord: HTMLParagraphElement
  
-    @Listen("click")
-  wurdeGelickt1(){
-    "clicked"
+  @Listen('keydown')
+  handleKeyDown(ev: KeyboardEvent){
+    if (ev.key === 'ArrowDown'){
+      console.log('down arrow pressed')
+    }
   }
-  exampleHandler2(ev: MouseEvent) {
-    console.log("es springt hier rein aber funkt net")
-    console.log(ev)
-    const target = ev.target as HTMLElement
-    let acc = target
-    .closest<HTMLDivElement>(".accordion")
-    acc.classList.add("test")
-    this.openAccord.emit("test")
-    
+  private handelCancel = ()=> {
+    this.isopen =true;
+  }
+
+  
+
+  testfunction(){
+    console.log("submit")
+    this.check = true;
+    console.log(this.check)
+    document.cookie = "CookieSet"
   }
   
   
   
 didCompLoad(){
   console.log("it is successfully loaded, your accordeon")
+
+ 
 }
 
  
   render() {
     return (
-      <Host>  
-        <h2> {this.titelAccord} </h2>
-         <button class="accordion">Section 1</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
+      
+      <div class={this.isopen ? 'modal-wrapper' : 'modal-wrapper isopen'}>
+        <div class="modal-overlay" onClick={this.handelCancel}/>
+        <div class="modal">
+        <div class="close"  onClick={this.handelCancel}>
+              <p>X</p>
+              </div>
+          <div class="header">
+            <input type="checkbox" id="submitBox"onClick={this.testfunction}></input>
+            <button onClick={this.handelCancel}>speichern</button>
+            
+              <slot/>
+              </div>
+                </div>
+              </div>
+              
 
-<button class="accordion">Section 2</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
-
-<div class="accordion" onClick={(ev)=>this.exampleHandler2(ev)}>Section 3</div>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div> 
-      </Host>
     );
   }
 
 }
-/*this.openAccord.emit("custom value");
-    
-    let acc = document.getElementsByClassName("accordion");
-    let i:number;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-     Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel 
-    this.classList.toggle("active");
-
-    
-    let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });}
-  } Toggle between hiding and showing the active panel */

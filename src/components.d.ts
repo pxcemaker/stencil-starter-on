@@ -11,7 +11,16 @@ export namespace Components {
         "exampleToUpperCase": () => Promise<void>;
     }
     interface MyAccord {
+        "check": boolean;
+        "isopen": boolean;
         "titelAccord": string;
+    }
+    interface MyAccordion {
+        "accOpen": boolean;
+    }
+    interface MyButton {
+        "appearance": string;
+        "text": string;
     }
     interface MyComponent {
         /**
@@ -28,7 +37,6 @@ export namespace Components {
         "middle": string;
     }
     interface MyCookies {
-        "titel": string;
     }
     interface MyGallery {
     }
@@ -45,6 +53,18 @@ declare global {
     var HTMLMyAccordElement: {
         prototype: HTMLMyAccordElement;
         new (): HTMLMyAccordElement;
+    };
+    interface HTMLMyAccordionElement extends Components.MyAccordion, HTMLStencilElement {
+    }
+    var HTMLMyAccordionElement: {
+        prototype: HTMLMyAccordionElement;
+        new (): HTMLMyAccordionElement;
+    };
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    }
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -67,6 +87,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
+        "my-accordion": HTMLMyAccordionElement;
+        "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-cookies": HTMLMyCookiesElement;
         "my-gallery": HTMLMyGalleryElement;
@@ -78,8 +100,17 @@ declare namespace LocalJSX {
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
     }
     interface MyAccord {
+        "check"?: boolean;
+        "isopen"?: boolean;
         "onOpenaccord"?: (event: CustomEvent<string>) => void;
         "titelAccord"?: string;
+    }
+    interface MyAccordion {
+        "accOpen"?: boolean;
+    }
+    interface MyButton {
+        "appearance"?: string;
+        "text"?: string;
     }
     interface MyComponent {
         /**
@@ -96,13 +127,14 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface MyCookies {
-        "titel"?: string;
     }
     interface MyGallery {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
+        "my-accordion": MyAccordion;
+        "my-button": MyButton;
         "my-component": MyComponent;
         "my-cookies": MyCookies;
         "my-gallery": MyGallery;
@@ -114,6 +146,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
+            "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-cookies": LocalJSX.MyCookies & JSXBase.HTMLAttributes<HTMLMyCookiesElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
