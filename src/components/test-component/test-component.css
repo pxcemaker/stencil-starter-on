@@ -32,14 +32,16 @@
   margin: 10px;
 }
 
-.info,h3{
-  margin-left: 10px;
-}
-
 h3{
+  margin-left: 10px;
   color: green;
 }
 
-.hide{
-  visibility: hidden;
+
+
+.false{
+visibility: hidden;
+}
+.true{
+  visibility: visible;
 }

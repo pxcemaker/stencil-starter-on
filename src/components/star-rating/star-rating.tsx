@@ -1,4 +1,4 @@
-import { Component, Host, h, Event, EventEmitter, Listen } from '@stencil/core';
+import { Component, Host, h, Event, EventEmitter, Listen, State } from '@stencil/core';
 
 @Component({
   tag: 'star-rating',
@@ -7,16 +7,18 @@ import { Component, Host, h, Event, EventEmitter, Listen } from '@stencil/core';
 })
 export class StarRating {
 
+  @State() value:number;
+
   @Event() giveRating: EventEmitter;
 
-  @Listen("input")
+  @Listen('input')
   onInput(event) {
     this.giveRating.emit(
       {
         event, value: event.target.value
       }
     );
-    alert("Danke für Ihre Bewertung! Sie haben uns" + event.target.value +" Sterne gegeben")
+    alert("Danke für Ihre Bewertung! Sie haben uns " + event.target.value +" Sterne gegeben")
   }
 
   render() {

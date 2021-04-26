@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element, getAssetPath} from '@stencil/core';
+import { Component, Host, h, Prop, getAssetPath, State} from '@stencil/core';
 
 @Component({
   tag: 'test-component',
@@ -7,30 +7,24 @@ import { Component, Host, h, Prop, Element, getAssetPath} from '@stencil/core';
   assetsDirs:["assets"],
 })
 export class TestComponent {
-  @Prop() image:String="Braunbaer.jpg"
-  @Prop() animal:String="Braunbär"
-  @Prop() age:Number=23;
-  @Prop() habitat:String="mountains"
-  @Prop() weight:String="12 kg"
+  @State() showInfo:string;
+  @Prop() image:string="Braunbaer.jpg"
+  @Prop() animal:string="Braunbär"
+  @Prop() age:number=23;
+  @Prop() habitat:string="mountains"
+  @Prop() weight:string="12 kg"
 
-  @Element() el :HTMLElement;
-
-  
-
-
-  hideInfo() {
-
-    console.log("hallohallo");
-
-    let info = this.el.querySelector<HTMLDivElement>(".info");
-    info.classList.add(".hide");
+  handleMouseClick(){
+    
+    if(this.showInfo=="false"){
+      this.showInfo="true";
+    }
+    else{
+      this.showInfo="false";
+    }
     
   }
-
-
-
-
-  
+ 
 
   render() {
     return (
@@ -39,12 +33,14 @@ export class TestComponent {
           <img src= {getAssetPath(` ./assets/${this.image}`)} alt="test"/>
           <div>
              <h3>{this.animal}</h3>
-            <div class="info">
+            <div class={this.showInfo}>
               <p> <strong>Alter: </strong>{this.age}</p>
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
               <p><strong>Gewicht: </strong>{this.weight}</p>
             </div>
-            <button id="toggle-info" onMouseOver={this.hideInfo} >Show Info</button>
+            <button id="toggle-info" onClick={() => {
+            this.handleMouseClick();
+          }}>Show Info</button>
           </div>
         </div>
       </Host>

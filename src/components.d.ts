@@ -32,11 +32,11 @@ export namespace Components {
     interface StarRating {
     }
     interface TestComponent {
-        "age": Number;
-        "animal": String;
-        "habitat": String;
-        "image": String;
-        "weight": String;
+        "age": number;
+        "animal": string;
+        "habitat": string;
+        "image": string;
+        "weight": string;
     }
 }
 declare global {
@@ -114,11 +114,11 @@ declare namespace LocalJSX {
         "onGiveRating"?: (event: CustomEvent<any>) => void;
     }
     interface TestComponent {
-        "age"?: Number;
-        "animal"?: String;
-        "habitat"?: String;
-        "image"?: String;
-        "weight"?: String;
+        "age"?: number;
+        "animal"?: string;
+        "habitat"?: string;
+        "image"?: string;
+        "weight"?: string;
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
