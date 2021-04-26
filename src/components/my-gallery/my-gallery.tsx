@@ -1,18 +1,65 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop, State, Watch } from '@stencil/core';
+
 
 @Component({
   tag: 'my-gallery',
   styleUrl: 'my-gallery.css',
   shadow: true,
 })
+
 export class MyGallery {
 
-  render() {
-    return (
-      <Host>
-        <slot></slot>
-      </Host>
-    );
-  }
+@State() items: string[] = ["campfire.png", "https://via.placeholder.com/150"];
+//@State() internalItems: string[];
 
+/*componentWillLoad() {
+  this.parseOptions();
+}
+
+@Watch('items')
+parseOptions() {
+  if (this.items) {
+    this.internalItems = JSON.parse(this.items);
+  }
+}
+*/
+  render() {
+
+    return (
+      
+      <Host>
+
+    <div class="gallery">
+
+            <div class="item1">
+              <a href={this.items[0]}><img src={this.items[0]}></img></a>
+            </div>
+
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+            
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+            
+             <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+            
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+            
+            
+      </div>
+
+      </Host>
+
+    )}
+    
 }

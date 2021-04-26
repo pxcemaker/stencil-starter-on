@@ -36,6 +36,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyContact {
+    }
     interface MyCookies {
     }
     interface MyGallery {
@@ -72,6 +74,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyContactElement extends Components.MyContact, HTMLStencilElement {
+    }
+    var HTMLMyContactElement: {
+        prototype: HTMLMyContactElement;
+        new (): HTMLMyContactElement;
+    };
     interface HTMLMyCookiesElement extends Components.MyCookies, HTMLStencilElement {
     }
     var HTMLMyCookiesElement: {
@@ -90,6 +98,7 @@ declare global {
         "my-accordion": HTMLMyAccordionElement;
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
+        "my-contact": HTMLMyContactElement;
         "my-cookies": HTMLMyCookiesElement;
         "my-gallery": HTMLMyGalleryElement;
     }
@@ -126,6 +135,8 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyContact {
+    }
     interface MyCookies {
     }
     interface MyGallery {
@@ -136,6 +147,7 @@ declare namespace LocalJSX {
         "my-accordion": MyAccordion;
         "my-button": MyButton;
         "my-component": MyComponent;
+        "my-contact": MyContact;
         "my-cookies": MyCookies;
         "my-gallery": MyGallery;
     }
@@ -149,6 +161,7 @@ declare module "@stencil/core" {
             "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-cookies": LocalJSX.MyCookies & JSXBase.HTMLAttributes<HTMLMyCookiesElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
         }

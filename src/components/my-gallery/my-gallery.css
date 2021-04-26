@@ -1,3 +1,24 @@
-:host {
-  display: block;
+.gallery {
+  display: grid;
+  grid-template-columns: 11% 11% 11%;
+  grid-template-rows: 168px 1fr 100px;  
+  position: relative;
+  margin: 20px;
+}
+
+.item1 {
+  background-color: #fee2634b;
+  width: 150px;
+  height: 150px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  transition: 1s;
+}
+
+img:hover {
+  transform: scale(1.1);
+  filter: grayscale(80%);
 }
