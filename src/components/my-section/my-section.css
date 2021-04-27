@@ -1,0 +1,23 @@
+.section {
+  background-color: #8da37bab;
+  width: 100%;
+  font-family: 'Open Sans';
+  line-height: 25px;
+}
+
+.text {
+  width: 35%;
+  padding: 100px;
+  margin-left: 650px;
+}
+
+.image {
+  margin-top: -520px;
+  margin-left: 0px;
+  padding: 90px;
+}
+
+img {
+  width: 40%;
+  border-radius: 15px;
+}

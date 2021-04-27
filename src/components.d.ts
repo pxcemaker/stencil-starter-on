@@ -10,6 +10,8 @@ export namespace Components {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
     }
+    interface ImgLinks {
+    }
     interface MyAccord {
         "check": boolean;
         "isopen": boolean;
@@ -42,6 +44,11 @@ export namespace Components {
     }
     interface MyGallery {
     }
+    interface MySection {
+        "headline": any;
+        "image": any;
+        "text": any;
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -49,6 +56,12 @@ declare global {
     var HTMLExampleComponentElement: {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
+    };
+    interface HTMLImgLinksElement extends Components.ImgLinks, HTMLStencilElement {
+    }
+    var HTMLImgLinksElement: {
+        prototype: HTMLImgLinksElement;
+        new (): HTMLImgLinksElement;
     };
     interface HTMLMyAccordElement extends Components.MyAccord, HTMLStencilElement {
     }
@@ -92,8 +105,15 @@ declare global {
         prototype: HTMLMyGalleryElement;
         new (): HTMLMyGalleryElement;
     };
+    interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
+    }
+    var HTMLMySectionElement: {
+        prototype: HTMLMySectionElement;
+        new (): HTMLMySectionElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
+        "img-links": HTMLImgLinksElement;
         "my-accord": HTMLMyAccordElement;
         "my-accordion": HTMLMyAccordionElement;
         "my-button": HTMLMyButtonElement;
@@ -101,12 +121,15 @@ declare global {
         "my-contact": HTMLMyContactElement;
         "my-cookies": HTMLMyCookiesElement;
         "my-gallery": HTMLMyGalleryElement;
+        "my-section": HTMLMySectionElement;
     }
 }
 declare namespace LocalJSX {
     interface ExampleComponent {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
+    }
+    interface ImgLinks {
     }
     interface MyAccord {
         "check"?: boolean;
@@ -141,8 +164,14 @@ declare namespace LocalJSX {
     }
     interface MyGallery {
     }
+    interface MySection {
+        "headline"?: any;
+        "image"?: any;
+        "text"?: any;
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
+        "img-links": ImgLinks;
         "my-accord": MyAccord;
         "my-accordion": MyAccordion;
         "my-button": MyButton;
@@ -150,6 +179,7 @@ declare namespace LocalJSX {
         "my-contact": MyContact;
         "my-cookies": MyCookies;
         "my-gallery": MyGallery;
+        "my-section": MySection;
     }
 }
 export { LocalJSX as JSX };
@@ -157,6 +187,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
+            "img-links": LocalJSX.ImgLinks & JSXBase.HTMLAttributes<HTMLImgLinksElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
@@ -164,6 +195,7 @@ declare module "@stencil/core" {
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-cookies": LocalJSX.MyCookies & JSXBase.HTMLAttributes<HTMLMyCookiesElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
+            "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
         }
     }
 }
