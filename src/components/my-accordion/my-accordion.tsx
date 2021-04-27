@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop,Host } from '@stencil/core';
 
 @Component({
   tag: 'my-accordion',
@@ -8,17 +8,14 @@ import { Component, h, Prop } from '@stencil/core';
 export class MyAccordion {
   @Prop({mutable:true,
   reflect:true,})
-  @Prop() accOpen:boolean = true;
+  @Prop() isOpen:boolean;
+  @Prop() accordText: string;
 
 
-  exampleHandler2(ev: MouseEvent) {
-    console.log("es springt hier rein aber funkt net")
+ exampleHandler(ev: MouseEvent) {
+    
     console.log(ev)
-    /*const target = ev.target as HTMLElement
-    let acc = target
-    .closest<HTMLDivElement>(".accordion")
-    acc.classList.add("size")*/
-    this.accOpen= false
+    this.isOpen= false
 
     
 
@@ -28,11 +25,23 @@ export class MyAccordion {
   render() {
     return (
       
-         <div class={this.accOpen ? 'accordion' : 'panel'}  onClick={(ev)=>this.exampleHandler2(ev)}> Section 1
+      <Host class={this.isOpen ? 'showRadio' : 'hide'}>
+   <div class="accordion" onClick={(ev)=>this.exampleHandler(ev)}>
+       <p> {this.accordText}</p>
+     </div>
+   
+     </Host>
+      
+      
+      
+      
+      
+      
+      /*div class={this.accOpen ? 'accordion' : 'panel'} onClick={(ev)=>this.exampleHandler2(ev)}> Section 1
         <div class="panel">
         <p>Lorem ipsum...</p>
         </div>
-       </div>
+       </div>*/
         
       
     );

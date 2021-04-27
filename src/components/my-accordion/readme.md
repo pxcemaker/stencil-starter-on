@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute  | Description | Type      | Default |
-| --------- | ---------- | ----------- | --------- | ------- |
-| `accOpen` | `acc-open` |             | `boolean` | `true`  |
+| Property | Attribute | Description | Type      | Default |
+| -------- | --------- | ----------- | --------- | ------- |
+| `isOpen` | `is-open` |             | `boolean` | `true`  |
 
 
 ----------------------------------------------

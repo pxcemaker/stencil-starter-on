@@ -7,8 +7,8 @@
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
+  padding: 8px 22px;
+  width: 48%;
   text-align: left;
   border: none;
   outline: none;
@@ -28,11 +28,11 @@
   display: none;
   overflow: hidden;
 }
-.test {
+
+.hide {
   visibility: hidden;
 }
-.size {
-  height: auto;
-  width: auto;
-  background-image: url('elephant.jpg');
+.showRadio {
+  visibility: visible;
+  background-color: #e99d42;
 }
