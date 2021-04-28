@@ -6,6 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AnimalCard {
+        "age": number;
+        "animal": string;
+        "habitat": string;
+        "image": string;
+        "weight": string;
+    }
     interface ExampleComponent {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
@@ -40,6 +47,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAnimalCardElement extends Components.AnimalCard, HTMLStencilElement {
+    }
+    var HTMLAnimalCardElement: {
+        prototype: HTMLAnimalCardElement;
+        new (): HTMLAnimalCardElement;
+    };
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
     }
     var HTMLExampleComponentElement: {
@@ -77,6 +90,7 @@ declare global {
         new (): HTMLTestComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "animal-card": HTMLAnimalCardElement;
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
         "my-component": HTMLMyComponentElement;
@@ -86,6 +100,13 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AnimalCard {
+        "age"?: number;
+        "animal"?: string;
+        "habitat"?: string;
+        "image"?: string;
+        "weight"?: string;
+    }
     interface ExampleComponent {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
@@ -120,6 +141,7 @@ declare namespace LocalJSX {
         "weight"?: string;
     }
     interface IntrinsicElements {
+        "animal-card": AnimalCard;
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
         "my-component": MyComponent;
@@ -132,6 +154,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "animal-card": LocalJSX.AnimalCard & JSXBase.HTMLAttributes<HTMLAnimalCardElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
