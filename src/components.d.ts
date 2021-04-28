@@ -10,8 +10,6 @@ export namespace Components {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
     }
-    interface ImgLinks {
-    }
     interface MyAccord {
         "check": boolean;
         "isopen": boolean;
@@ -42,13 +40,13 @@ export namespace Components {
     }
     interface MyGallery {
     }
+    interface MyHeader {
+        "headerTitel": string;
+    }
     interface MySection {
         "headline": any;
         "image": any;
         "text": any;
-    }
-    interface MyHeader {
-        "headerTitel": string;
     }
 }
 declare global {
@@ -57,12 +55,6 @@ declare global {
     var HTMLExampleComponentElement: {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
-    };
-    interface HTMLImgLinksElement extends Components.ImgLinks, HTMLStencilElement {
-    }
-    var HTMLImgLinksElement: {
-        prototype: HTMLImgLinksElement;
-        new (): HTMLImgLinksElement;
     };
     interface HTMLMyAccordElement extends Components.MyAccord, HTMLStencilElement {
     }
@@ -100,37 +92,34 @@ declare global {
         prototype: HTMLMyGalleryElement;
         new (): HTMLMyGalleryElement;
     };
-    interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
-    }
-    var HTMLMySectionElement: {
-        prototype: HTMLMySectionElement;
-        new (): HTMLMySectionElement;
-    }
     interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
     }
     var HTMLMyHeaderElement: {
         prototype: HTMLMyHeaderElement;
         new (): HTMLMyHeaderElement;
     };
+    interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
+    }
+    var HTMLMySectionElement: {
+        prototype: HTMLMySectionElement;
+        new (): HTMLMySectionElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
-        "img-links": HTMLImgLinksElement;
         "my-accord": HTMLMyAccordElement;
         "my-accordion": HTMLMyAccordionElement;
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
         "my-gallery": HTMLMyGalleryElement;
-        "my-section": HTMLMySectionElement;
         "my-header": HTMLMyHeaderElement;
+        "my-section": HTMLMySectionElement;
     }
 }
 declare namespace LocalJSX {
     interface ExampleComponent {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
-    }
-    interface ImgLinks {
     }
     interface MyAccord {
         "check"?: boolean;
@@ -163,25 +152,24 @@ declare namespace LocalJSX {
     }
     interface MyGallery {
     }
+    interface MyHeader {
+        "headerTitel"?: string;
+    }
     interface MySection {
         "headline"?: any;
         "image"?: any;
         "text"?: any;
     }
-    interface MyHeader {
-        "headerTitel"?: string;
-    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
-        "img-links": ImgLinks;
         "my-accord": MyAccord;
         "my-accordion": MyAccordion;
         "my-button": MyButton;
         "my-component": MyComponent;
         "my-contact": MyContact;
         "my-gallery": MyGallery;
-        "my-section": MySection;
         "my-header": MyHeader;
+        "my-section": MySection;
     }
 }
 export { LocalJSX as JSX };
@@ -189,15 +177,14 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
-            "img-links": LocalJSX.ImgLinks & JSXBase.HTMLAttributes<HTMLImgLinksElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
-            "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+            "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
         }
     }
 }

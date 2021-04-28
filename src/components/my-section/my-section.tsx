@@ -26,7 +26,7 @@ export class MySection {
         </div>
 
         <div class="image"> 
-          <img src={this.image}></img>
+          <a href="#"><img src={this.image}></img></a>
         </div>        
         
     </div>
