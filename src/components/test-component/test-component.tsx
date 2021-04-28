@@ -15,12 +15,14 @@ export class TestComponent {
   @Prop() weight:string="12 kg"
 
   handleMouseClick(){
-    
+    let toggleInfo =document.querySelector("test-component").shadowRoot.querySelector("#toggle-info");
     if(this.showInfo=="false"){
       this.showInfo="true";
+      toggleInfo.innerHTML="Hide Info";
     }
     else{
       this.showInfo="false";
+      toggleInfo.innerHTML="Show Info";
     }
     
   }
@@ -38,7 +40,7 @@ export class TestComponent {
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
               <p><strong>Gewicht: </strong>{this.weight}</p>
             </div>
-            <button id="toggle-info" onClick={() => {this.handleMouseClick();}}>Show Info</button>
+            <button id="toggle-info" onClick={() => {this.handleMouseClick();}}>Hide Info</button>
           </div>
         </div>
       </Host>
