@@ -111,7 +111,6 @@ declare namespace LocalJSX {
     interface MyGallery {
     }
     interface StarRating {
-        "onGiveRating"?: (event: CustomEvent<any>) => void;
     }
     interface TestComponent {
         "age"?: number;

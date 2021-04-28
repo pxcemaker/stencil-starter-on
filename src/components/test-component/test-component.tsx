@@ -30,7 +30,7 @@ export class TestComponent {
     return (
       <Host>
         <div class="animal-card">
-          <img src= {getAssetPath(` ./assets/${this.image}`)} alt="test"/>
+          <img src= {getAssetPath(` ./assets/${this.image}`)} alt={this.animal}/>
           <div>
              <h3>{this.animal}</h3>
             <div class={this.showInfo}>
@@ -38,9 +38,7 @@ export class TestComponent {
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
               <p><strong>Gewicht: </strong>{this.weight}</p>
             </div>
-            <button id="toggle-info" onClick={() => {
-            this.handleMouseClick();
-          }}>Show Info</button>
+            <button id="toggle-info" onClick={() => {this.handleMouseClick();}}>Show Info</button>
           </div>
         </div>
       </Host>
