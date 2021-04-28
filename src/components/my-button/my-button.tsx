@@ -1,20 +1,20 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-button',
   styleUrl: 'my-button.css',
   shadow: true,
 })
-export class ApolloButton {
-  @Prop() text: string;
-  @Prop() appearance: string;
+export class MyButton {
+  @Prop() quesOpt: string;
 
   render() {
     return (
-      <button class={`btn ${this.appearance}`} type="button">
-        {/* Slot */}
-        {this.text}
-      </button>
+      <Host>
+        <slot></slot>
+        <button> {this.quesOpt}</button>
+      </Host>
     );
   }
+
 }

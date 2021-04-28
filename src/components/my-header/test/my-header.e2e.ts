@@ -1,11 +1,11 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('my-cookies', () => {
+describe('my-header', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<my-cookies></my-cookies>');
+    await page.setContent('<my-header></my-header>');
 
-    const element = await page.find('my-cookies');
+    const element = await page.find('my-header');
     expect(element).toHaveClass('hydrated');
   });
 });

@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MyCookies } from '../my-cookies';
+import { MyHeader } from '../my-header';
 
-describe('my-cookies', () => {
+describe('my-header', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [MyCookies],
-      html: `<my-cookies></my-cookies>`,
+      components: [MyHeader],
+      html: `<my-header></my-header>`,
     });
     expect(page.root).toEqualHtml(`
-      <my-cookies>
+      <my-header>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </my-cookies>
+      </my-header>
     `);
   });
 });

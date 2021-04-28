@@ -23,14 +23,28 @@
        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
        duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." headline="Überschrift"></my-section>
+       <my-accord></my-accord>
+
+        <my-header header-titel="Das ist unser FAQ!"></my-header>
+       <my-button ques-opt="Wie lange hat unser ZOO offen ?"></my-button>
+       <my-accordion accord-text="Jeden Tag von 9.00 Uhr - 18.00 Uhr, außer an Feiertagen"></my-accordion>
+
+       <my-button ques-opt="Is unser ZOO für Schulgruppen geeignet ?" id="schul"></my-button>
+       <my-accordion accord-text="Ja! Man kann gerne mit mehreren Schulgruppen kommen. Man muss sich legendlich anmelden."
+       id="schulenacc"></my-accordion>
 
 </body>
-<!--<script>
-var btn = document.querySelector('my-button');
-var modal = document.querySelector('my-accord');
+<script>
+let btn = document.querySelector('my-button')
+let accord = document.querySelector('my-accordion')
 btn.addEventListener('click', function(){
-    modal.isopen=true;
+    accord.isOpen = true;
 })
 
-</script>!-->
+let btn1 = document.querySelector('#schul')
+let schulacc = document.querySelector('#schulenacc')
+btn1.addEventListener('click', function(){
+    schulacc.isOpen = true;
+})
+</script>
 </html>

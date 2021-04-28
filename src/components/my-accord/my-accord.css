@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 :host {
   display: block;
 }
 /* Modal Wrapper */
+
+p {
+  font-size: 20px;
+  font-family: 'Staatliches', cursive;
+  color: crimson;
+}
 .modal-wrapper {
   position: fixed;
   top: 0;
@@ -15,16 +22,13 @@
   z-index: 1;
 }
 
-.accordion {
-  background-color: blueviolet;
-  size: 100px 100px;
-}
-
 .modal-overlay {
   background: rgba(0, 0, 0, 0.6);
   height: 100%;
   width: 100%;
   position: absolute;
+  width: 100%;
+  height: 300px;
 }
 
 /* Modal styles */
@@ -42,70 +46,6 @@
 
 /* Modal Header */
 
-.modal-wrapper .modal .header {
-  padding: 16px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--mono-05);
-}
-
-.modal-wrapper .modal .header h6 {
-  font-size: 16px;
-  margin: 0;
-  line-height: 1;
-}
-
-.modal-wrapper .modal .header .close {
-  height: 24px;
-  width: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
-  text-align: end;
-}
-
-.modal-wrapper .modal .header .close:hover {
-  background: var(--mono-10);
-}
-
-/* Modal Body */
-
-.modal-wrapper .modal .body {
-  padding: 16px;
-  font-size: 14px;
-  line-height: 21px;
-  max-height: 320px;
-  height: auto;
-  overflow-y: auto;
-  color: var(--mono-50);
-}
-
-/* Modal Footer */
-
-.modal-wrapper .modal .footer {
-  border-top: 1px solid var(--mono-05);
-  padding: 16px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.modal-wrapper .modal .footer my-button {
-  margin: 0 6px;
-}
-
-.modal-wrapper .modal .footer my-button:first-child {
-  margin: 0 6px 0px 0px;
-}
-.modal-wrapper .modal .footer my-button:last-child {
-  margin: 0 0px 0px 6px;
-}
-
 /* Modal Open Styles */
 .isopen {
   opacity: 1;
@@ -116,8 +56,4 @@
 
 .isopen .modal {
   transform: translate(-50%, 90px);
-}
-
-.checkistrue {
-  visibility: hidden;
 }

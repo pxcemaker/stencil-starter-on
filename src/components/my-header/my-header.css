@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+:host {
+  display: block;
+}
+h1,
+h2,
+h3 {
+  font-size: 40px;
+  font-family: 'Staatliches', cursive;
+  color: rgb(107, 119, 38);
+  text-align: left;
+  padding: 20px;
+  background-color: cornsilk;
+}

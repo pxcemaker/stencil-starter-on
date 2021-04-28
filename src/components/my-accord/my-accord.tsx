@@ -1,4 +1,4 @@
-import { Component,  h, Prop,  Listen ,Event, EventEmitter, Element } from '@stencil/core';
+import { Component,  h, Prop,  Listen ,Event, EventEmitter, Element, Host } from '@stencil/core';
 
 @Component({
   tag: 'my-accord',
@@ -36,9 +36,14 @@ isopen:boolean;
 
   testfunction(){
     console.log("submit")
-    this.check = true;
+    
     console.log(this.check)
-    document.cookie = "CookieSet"
+    const test = document.cookie = "CookieSet"
+    if(test==="CookieSet")
+    {
+      this.check = true;
+    }
+
   }
   
   
@@ -52,23 +57,28 @@ didCompLoad(){
  
   render() {
     return (
-      
+      <Host class={this.check ? 'modal-wrapper' : 'modal-wrapper isopen'}>
       <div class={this.isopen ? 'modal-wrapper' : 'modal-wrapper isopen'}>
         <div class="modal-overlay" onClick={this.handelCancel}/>
         <div class="modal">
         <div class="close"  onClick={this.handelCancel}>
-              <p>X</p>
+              <p>X
+              </p>
+              <h3>Möchten Sie die Cookies akzeptieren ?</h3>
               </div>
           <div class="header">
-            <input type="checkbox" id="submitBox"onClick={this.testfunction}></input>
-            <button onClick={this.handelCancel}>speichern</button>
+            <input type="checkbox" id="submitBox"onClick={this.testfunction} ></input>
+              <label htmlFor="JA">Ja</label>
+              <p></p>
+              <input type="checkbox" id="submitBox"onClick={this.testfunction} ></input>
+              <label htmlFor="NE">Nein</label>
+            <my-button onClick={this.handelCancel} ques-opt="speichern"> </my-button>
             
-              <slot/>
               </div>
                 </div>
               </div>
               
-
+              </Host>
     );
   }
 
