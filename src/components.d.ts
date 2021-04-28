@@ -43,6 +43,10 @@ export namespace Components {
     interface MyHeader {
         "headerTitel": string;
     }
+    interface MyLinks {
+        "text1": any;
+        "text2": any;
+    }
     interface MySection {
         "headline": any;
         "image": any;
@@ -98,6 +102,12 @@ declare global {
         prototype: HTMLMyHeaderElement;
         new (): HTMLMyHeaderElement;
     };
+    interface HTMLMyLinksElement extends Components.MyLinks, HTMLStencilElement {
+    }
+    var HTMLMyLinksElement: {
+        prototype: HTMLMyLinksElement;
+        new (): HTMLMyLinksElement;
+    };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
     var HTMLMySectionElement: {
@@ -113,6 +123,7 @@ declare global {
         "my-contact": HTMLMyContactElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
+        "my-links": HTMLMyLinksElement;
         "my-section": HTMLMySectionElement;
     }
 }
@@ -155,6 +166,10 @@ declare namespace LocalJSX {
     interface MyHeader {
         "headerTitel"?: string;
     }
+    interface MyLinks {
+        "text1"?: any;
+        "text2"?: any;
+    }
     interface MySection {
         "headline"?: any;
         "image"?: any;
@@ -169,6 +184,7 @@ declare namespace LocalJSX {
         "my-contact": MyContact;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
+        "my-links": MyLinks;
         "my-section": MySection;
     }
 }
@@ -184,6 +200,7 @@ declare module "@stencil/core" {
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+            "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
         }
     }
