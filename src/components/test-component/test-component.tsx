@@ -16,15 +16,18 @@ export class TestComponent {
 
   handleMouseClick(){
     let toggleInfo =document.querySelector("test-component").shadowRoot.querySelector("#toggle-info");
+    let animalName =document.querySelector("test-component").shadowRoot.querySelector("#animal-name");
     if(this.showInfo=="false"){
       this.showInfo="true";
       toggleInfo.innerHTML="Hide Info";
+      animalName.classList.replace("big-title", "small-title")
+    
     }
     else{
       this.showInfo="false";
       toggleInfo.innerHTML="Show Info";
+      animalName.classList.replace("small-title", "big-title")
     }
-    
   }
  
 
@@ -34,7 +37,7 @@ export class TestComponent {
         <div class="animal-card">
           <img src= {getAssetPath(` ./assets/${this.image}`)} alt={this.animal}/>
           <div>
-             <h3>{this.animal}</h3>
+             <h3 id="animal-name"class="small-title">{this.animal}</h3>
             <div class={this.showInfo}>
               <p> <strong>Alter: </strong>{this.age}</p>
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
