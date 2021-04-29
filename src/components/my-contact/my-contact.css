@@ -1,0 +1,82 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formular {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 30px;
+  padding: 10px;
+  border: 1px solid black;
+  display: block;
+  border: none;
+  background-color: #fee163;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+button {
+  border: 1px solid #8da37b;
+  background: #8da37b;
+  border-radius: 3px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-top: 5px;
+  color: white;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+input {
+  border: 1px solid white;
+  border-radius: 3px;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 5px;
+  height: 35px;
+}
+
+::placeholder {
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.formular .inputFields {
+  text-align: center;
+}
+
+.formular .inputFields p {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
+
+#name input {
+  width: 358px;
+}
+
+#email input {
+  width: 358px;
+}
+
+#question {
+  margin: 5px;
+}
+
+#question textarea {
+  width: 358px;
+  height: 150px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#error {
+  color: #F25A52;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}

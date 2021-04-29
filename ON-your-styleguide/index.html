@@ -12,13 +12,47 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <example-component example-prop="Dies ist ein Property-Inhalt der Webcomponent"> Dies ist der Slot-Inhalt </example-component>
     <p>Ihr könnt all diesen Content verändern und mehr Unterseiten hinzufügen</p>
     <my-accord titelAccord="kaskdkda"> ??
        </my-accord>
        <animal-card image="Braunbaer.jpg" animal="Braunbär" age="13" habitat="Wald" weight="120 kg"></animal-card>
        <star-rating></star-rating>
+=======
+       <my-gallery></my-gallery>
+       <my-contact></my-contact>
+       <my-accord></my-accord>
+
+       <my-header header-titel="Das ist unser FAQ!"></my-header>
+       <my-button ques-opt="Wie lange hat unser ZOO offen ?"></my-button>
+       <my-accordion accord-text="Jeden Tag von 9.00 Uhr - 18.00 Uhr, außer an Feiertagen"></my-accordion>
+
+       <my-button ques-opt="Is unser ZOO für Schulgruppen geeignet ?" id="schul"></my-button>
+       <my-accordion accord-text="Ja! Man kann gerne mit mehreren Schulgruppen kommen. Man muss sich legendlich anmelden."
+       id="schulenacc"></my-accordion>
+
+       <my-section image="panda.jpg" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+       aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+       no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+       nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+       duo dolores et ea rebum." headline="Überschrift"></my-section>
+
+        <my-links></my-links>
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
 
 </body>
+<script>
+let btn = document.querySelector('my-button')
+let accord = document.querySelector('my-accordion')
+btn.addEventListener('click', function(){
+    accord.isOpen = true;
+})
 
+let btn1 = document.querySelector('#schul')
+let schulacc = document.querySelector('#schulenacc')
+btn1.addEventListener('click', function(){
+    schulacc.isOpen = true;
+})
+</script>
 </html>

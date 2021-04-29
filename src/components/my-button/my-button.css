@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+button {
+  background-color: #e7d95dfa; /* Green */
+  width: 50%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

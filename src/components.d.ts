@@ -18,7 +18,16 @@ export namespace Components {
         "exampleToUpperCase": () => Promise<void>;
     }
     interface MyAccord {
+        "check": boolean;
+        "isopen": boolean;
         "titelAccord": string;
+    }
+    interface MyAccordion {
+        "accordText": string;
+        "isOpen": boolean;
+    }
+    interface MyButton {
+        "quesOpt": string;
     }
     interface MyComponent {
         /**
@@ -34,9 +43,25 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyContact {
+    }
     interface MyGallery {
     }
+<<<<<<< HEAD
     interface StarRating {
+=======
+    interface MyHeader {
+        "headerTitel": string;
+    }
+    interface MyLinks {
+        "text1": any;
+        "text2": any;
+    }
+    interface MySection {
+        "headline": any;
+        "image": any;
+        "text": any;
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
     }
 }
 declare global {
@@ -58,11 +83,29 @@ declare global {
         prototype: HTMLMyAccordElement;
         new (): HTMLMyAccordElement;
     };
+    interface HTMLMyAccordionElement extends Components.MyAccordion, HTMLStencilElement {
+    }
+    var HTMLMyAccordionElement: {
+        prototype: HTMLMyAccordionElement;
+        new (): HTMLMyAccordionElement;
+    };
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    }
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLMyContactElement extends Components.MyContact, HTMLStencilElement {
+    }
+    var HTMLMyContactElement: {
+        prototype: HTMLMyContactElement;
+        new (): HTMLMyContactElement;
     };
     interface HTMLMyGalleryElement extends Components.MyGallery, HTMLStencilElement {
     }
@@ -70,19 +113,48 @@ declare global {
         prototype: HTMLMyGalleryElement;
         new (): HTMLMyGalleryElement;
     };
+<<<<<<< HEAD
     interface HTMLStarRatingElement extends Components.StarRating, HTMLStencilElement {
     }
     var HTMLStarRatingElement: {
         prototype: HTMLStarRatingElement;
         new (): HTMLStarRatingElement;
+=======
+    interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
+    }
+    var HTMLMyHeaderElement: {
+        prototype: HTMLMyHeaderElement;
+        new (): HTMLMyHeaderElement;
+    };
+    interface HTMLMyLinksElement extends Components.MyLinks, HTMLStencilElement {
+    }
+    var HTMLMyLinksElement: {
+        prototype: HTMLMyLinksElement;
+        new (): HTMLMyLinksElement;
+    };
+    interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
+    }
+    var HTMLMySectionElement: {
+        prototype: HTMLMySectionElement;
+        new (): HTMLMySectionElement;
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
     };
     interface HTMLElementTagNameMap {
         "animal-card": HTMLAnimalCardElement;
         "example-component": HTMLExampleComponentElement;
         "my-accord": HTMLMyAccordElement;
+        "my-accordion": HTMLMyAccordionElement;
+        "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
+        "my-contact": HTMLMyContactElement;
         "my-gallery": HTMLMyGalleryElement;
+<<<<<<< HEAD
         "star-rating": HTMLStarRatingElement;
+=======
+        "my-header": HTMLMyHeaderElement;
+        "my-links": HTMLMyLinksElement;
+        "my-section": HTMLMySectionElement;
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
     }
 }
 declare namespace LocalJSX {
@@ -98,8 +170,17 @@ declare namespace LocalJSX {
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
     }
     interface MyAccord {
-        "onOpenAccord"?: (event: CustomEvent<string>) => void;
+        "check"?: boolean;
+        "isopen"?: boolean;
+        "onOpenaccord"?: (event: CustomEvent<string>) => void;
         "titelAccord"?: string;
+    }
+    interface MyAccordion {
+        "accordText"?: string;
+        "isOpen"?: boolean;
+    }
+    interface MyButton {
+        "quesOpt"?: string;
     }
     interface MyComponent {
         /**
@@ -115,17 +196,42 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyContact {
+    }
     interface MyGallery {
     }
+<<<<<<< HEAD
     interface StarRating {
+=======
+    interface MyHeader {
+        "headerTitel"?: string;
+    }
+    interface MyLinks {
+        "text1"?: any;
+        "text2"?: any;
+    }
+    interface MySection {
+        "headline"?: any;
+        "image"?: any;
+        "text"?: any;
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
     }
     interface IntrinsicElements {
         "animal-card": AnimalCard;
         "example-component": ExampleComponent;
         "my-accord": MyAccord;
+        "my-accordion": MyAccordion;
+        "my-button": MyButton;
         "my-component": MyComponent;
+        "my-contact": MyContact;
         "my-gallery": MyGallery;
+<<<<<<< HEAD
         "star-rating": StarRating;
+=======
+        "my-header": MyHeader;
+        "my-links": MyLinks;
+        "my-section": MySection;
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
     }
 }
 export { LocalJSX as JSX };
@@ -135,9 +241,18 @@ declare module "@stencil/core" {
             "animal-card": LocalJSX.AnimalCard & JSXBase.HTMLAttributes<HTMLAnimalCardElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
+            "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
+<<<<<<< HEAD
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
+=======
+            "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+            "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
+            "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
+>>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
         }
     }
 }
