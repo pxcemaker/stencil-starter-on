@@ -54,6 +54,13 @@ export namespace Components {
         "text1": any;
         "text2": any;
     }
+    interface MyNavigation {
+        "Bewertung": string;
+        "Galerie": string;
+        "Informationen": string;
+        "Kontakt": string;
+        "Startseite": string;
+    }
     interface MySection {
         "headline": any;
         "image": any;
@@ -125,6 +132,12 @@ declare global {
         prototype: HTMLMyLinksElement;
         new (): HTMLMyLinksElement;
     };
+    interface HTMLMyNavigationElement extends Components.MyNavigation, HTMLStencilElement {
+    }
+    var HTMLMyNavigationElement: {
+        prototype: HTMLMyNavigationElement;
+        new (): HTMLMyNavigationElement;
+    };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
     var HTMLMySectionElement: {
@@ -154,6 +167,7 @@ declare global {
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
+        "my-navigation": HTMLMyNavigationElement;
         "my-section": HTMLMySectionElement;
         "my-slider": HTMLMySliderElement;
         "star-rating": HTMLStarRatingElement;
@@ -209,6 +223,13 @@ declare namespace LocalJSX {
         "text1"?: any;
         "text2"?: any;
     }
+    interface MyNavigation {
+        "Bewertung"?: string;
+        "Galerie"?: string;
+        "Informationen"?: string;
+        "Kontakt"?: string;
+        "Startseite"?: string;
+    }
     interface MySection {
         "headline"?: any;
         "image"?: any;
@@ -229,6 +250,7 @@ declare namespace LocalJSX {
         "my-gallery": MyGallery;
         "my-header": MyHeader;
         "my-links": MyLinks;
+        "my-navigation": MyNavigation;
         "my-section": MySection;
         "my-slider": MySlider;
         "star-rating": StarRating;
@@ -248,6 +270,7 @@ declare module "@stencil/core" {
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
+            "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
