@@ -47,9 +47,6 @@ export namespace Components {
     }
     interface MyGallery {
     }
-<<<<<<< HEAD
-    interface StarRating {
-=======
     interface MyHeader {
         "headerTitel": string;
     }
@@ -61,7 +58,8 @@ export namespace Components {
         "headline": any;
         "image": any;
         "text": any;
->>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
+    }
+    interface StarRating {
     }
 }
 declare global {
@@ -113,13 +111,6 @@ declare global {
         prototype: HTMLMyGalleryElement;
         new (): HTMLMyGalleryElement;
     };
-<<<<<<< HEAD
-    interface HTMLStarRatingElement extends Components.StarRating, HTMLStencilElement {
-    }
-    var HTMLStarRatingElement: {
-        prototype: HTMLStarRatingElement;
-        new (): HTMLStarRatingElement;
-=======
     interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {
     }
     var HTMLMyHeaderElement: {
@@ -137,7 +128,12 @@ declare global {
     var HTMLMySectionElement: {
         prototype: HTMLMySectionElement;
         new (): HTMLMySectionElement;
->>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
+    };
+    interface HTMLStarRatingElement extends Components.StarRating, HTMLStencilElement {
+    }
+    var HTMLStarRatingElement: {
+        prototype: HTMLStarRatingElement;
+        new (): HTMLStarRatingElement;
     };
     interface HTMLElementTagNameMap {
         "animal-card": HTMLAnimalCardElement;
@@ -148,13 +144,10 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
         "my-gallery": HTMLMyGalleryElement;
-<<<<<<< HEAD
-        "star-rating": HTMLStarRatingElement;
-=======
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
         "my-section": HTMLMySectionElement;
->>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
+        "star-rating": HTMLStarRatingElement;
     }
 }
 declare namespace LocalJSX {
@@ -200,9 +193,6 @@ declare namespace LocalJSX {
     }
     interface MyGallery {
     }
-<<<<<<< HEAD
-    interface StarRating {
-=======
     interface MyHeader {
         "headerTitel"?: string;
     }
@@ -214,7 +204,8 @@ declare namespace LocalJSX {
         "headline"?: any;
         "image"?: any;
         "text"?: any;
->>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
+    }
+    interface StarRating {
     }
     interface IntrinsicElements {
         "animal-card": AnimalCard;
@@ -225,13 +216,10 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "my-contact": MyContact;
         "my-gallery": MyGallery;
-<<<<<<< HEAD
-        "star-rating": StarRating;
-=======
         "my-header": MyHeader;
         "my-links": MyLinks;
         "my-section": MySection;
->>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
+        "star-rating": StarRating;
     }
 }
 export { LocalJSX as JSX };
@@ -246,13 +234,10 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
-<<<<<<< HEAD
-            "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
-=======
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
->>>>>>> da6459fd342a0a434b0e19feec8f1f3fb306735b
+            "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
         }
     }
 }
