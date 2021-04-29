@@ -50,20 +50,16 @@ export namespace Components {
     interface MyHeader {
         "headerTitel": string;
     }
-<<<<<<< HEAD
+    interface MyLinks {
+        "text1": any;
+        "text2": any;
+    }
     interface MyNavigation {
         "Bewertung": string;
         "Galerie": string;
         "Informationen": string;
         "Kontakt": string;
         "Startseite": string;
-    }
-    interface MyScrollbutton {
-=======
-    interface MyLinks {
-        "text1": any;
-        "text2": any;
->>>>>>> 008d02e4e8e61ae9ca41ed79c13cf6f28436029b
     }
     interface MySection {
         "headline": any;
@@ -128,25 +124,17 @@ declare global {
         prototype: HTMLMyHeaderElement;
         new (): HTMLMyHeaderElement;
     };
-<<<<<<< HEAD
-    interface HTMLMyNavigationElement extends Components.MyNavigation, HTMLStencilElement {
-    }
-    var HTMLMyNavigationElement: {
-        prototype: HTMLMyNavigationElement;
-        new (): HTMLMyNavigationElement;
-    };
-    interface HTMLMyScrollbuttonElement extends Components.MyScrollbutton, HTMLStencilElement {
-    }
-    var HTMLMyScrollbuttonElement: {
-        prototype: HTMLMyScrollbuttonElement;
-        new (): HTMLMyScrollbuttonElement;
-=======
     interface HTMLMyLinksElement extends Components.MyLinks, HTMLStencilElement {
     }
     var HTMLMyLinksElement: {
         prototype: HTMLMyLinksElement;
         new (): HTMLMyLinksElement;
->>>>>>> 008d02e4e8e61ae9ca41ed79c13cf6f28436029b
+    };
+    interface HTMLMyNavigationElement extends Components.MyNavigation, HTMLStencilElement {
+    }
+    var HTMLMyNavigationElement: {
+        prototype: HTMLMyNavigationElement;
+        new (): HTMLMyNavigationElement;
     };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
@@ -170,12 +158,8 @@ declare global {
         "my-contact": HTMLMyContactElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
-<<<<<<< HEAD
-        "my-navigation": HTMLMyNavigationElement;
-        "my-scrollbutton": HTMLMyScrollbuttonElement;
-=======
         "my-links": HTMLMyLinksElement;
->>>>>>> 008d02e4e8e61ae9ca41ed79c13cf6f28436029b
+        "my-navigation": HTMLMyNavigationElement;
         "my-section": HTMLMySectionElement;
         "star-rating": HTMLStarRatingElement;
     }
@@ -226,20 +210,16 @@ declare namespace LocalJSX {
     interface MyHeader {
         "headerTitel"?: string;
     }
-<<<<<<< HEAD
+    interface MyLinks {
+        "text1"?: any;
+        "text2"?: any;
+    }
     interface MyNavigation {
         "Bewertung"?: string;
         "Galerie"?: string;
         "Informationen"?: string;
         "Kontakt"?: string;
         "Startseite"?: string;
-    }
-    interface MyScrollbutton {
-=======
-    interface MyLinks {
-        "text1"?: any;
-        "text2"?: any;
->>>>>>> 008d02e4e8e61ae9ca41ed79c13cf6f28436029b
     }
     interface MySection {
         "headline"?: any;
@@ -258,12 +238,8 @@ declare namespace LocalJSX {
         "my-contact": MyContact;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
-<<<<<<< HEAD
-        "my-navigation": MyNavigation;
-        "my-scrollbutton": MyScrollbutton;
-=======
         "my-links": MyLinks;
->>>>>>> 008d02e4e8e61ae9ca41ed79c13cf6f28436029b
+        "my-navigation": MyNavigation;
         "my-section": MySection;
         "star-rating": StarRating;
     }
@@ -281,12 +257,8 @@ declare module "@stencil/core" {
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
-<<<<<<< HEAD
-            "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
-            "my-scrollbutton": LocalJSX.MyScrollbutton & JSXBase.HTMLAttributes<HTMLMyScrollbuttonElement>;
-=======
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
->>>>>>> 008d02e4e8e61ae9ca41ed79c13cf6f28436029b
+            "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
         }
