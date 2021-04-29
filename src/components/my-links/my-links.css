@@ -1,0 +1,54 @@
+.all {
+  position: absolute;
+  width: 99%;
+  bottom: -1150px;
+}
+
+.section1 {
+  background-color: rgb(146, 168, 199);
+  width: 50%;
+  height: 50px;
+  text-align: center;
+}
+
+.section1:hover {
+  background-color: #7CA8E6;
+}
+
+.section1:hover p {
+  color: black;
+  font-weight: bolder;
+}
+
+.section1 p {
+  color: white;
+  padding: 15px;
+  font-family: 'Open Sans';
+}
+
+a {
+  text-decoration: none;
+}
+
+.section2 {
+  background-color: #DBC393;
+  float: right;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.section2:hover {
+  background-color: #E6C27C;
+}
+
+.section2:hover p {
+  color: black;
+  font-weight: bolder;
+}
+
+.section2 p {
+  color: white;
+  font-family: 'Open Sans';
+}
