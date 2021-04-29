@@ -1,4 +1,4 @@
-import { Component,  h, Prop,  Listen ,Event, EventEmitter, Element, Host } from '@stencil/core';
+import { Component,  h, Prop,Event, EventEmitter, Element, Host } from '@stencil/core';
 
 @Component({
   tag: 'my-accord',
@@ -17,34 +17,46 @@ export class MyAccord {
 isopen:boolean;
 @Prop() check:boolean;
 
-
   @Event({eventName:"openaccord"}) openAccord: EventEmitter<string>;
 
   @Element() myaccord: HTMLParagraphElement
- 
-  @Listen('keydown')
-  handleKeyDown(ev: KeyboardEvent){
-    if (ev.key === 'ArrowDown'){
-      console.log('down arrow pressed')
-    }
-  }
+
+
   private handelCancel = ()=> {
     this.isopen =true;
+    
+    
   }
 
-  
+ 
 
   testfunction(){
+    let idCounter = 0;
+    idCounter = localStorage.length;
     console.log("submit")
-    
-    console.log(this.check)
-    const test = document.cookie = "CookieSet"
-    if(test==="CookieSet")
-    {
-      this.check = true;
-    }
+    let inputYes = document.querySelector('#submitBox1');
+    const  inputNo = document.querySelector("#submitBox2");
+    let count:string;  
+     count = idCounter.toString()
 
+    let obj = {
+      "Ja": inputYes,
+      "Nein": inputNo,
+      "setCookie": count,
+      "test": this.check,
   }
+
+  localStorage.setItem(count ,JSON.stringify(obj)); // Hilfe zum LocalStorage https://www.mediaevent.de/javascript/local-storage.html
+  //console.log(localStorage.getItem(listenId));
+console.log("stringyfied look in local storage")
+
+if(count != "" || this.check ===false){
+  this.check =true;
+
+}
+  return obj;
+
+}
   
   
   
@@ -57,7 +69,7 @@ didCompLoad(){
  
   render() {
     return (
-      <Host class={this.check ? 'modal-wrapper' : 'modal-wrapper isopen'}>
+      <Host class={this.check ? 'hide' : 'modal-wrapper isopen'}>
       <div class={this.isopen ? 'modal-wrapper' : 'modal-wrapper isopen'}>
         <div class="modal-overlay" onClick={this.handelCancel}/>
         <div class="modal">
@@ -67,12 +79,12 @@ didCompLoad(){
               <h3>Möchten Sie die Cookies akzeptieren ?</h3>
               </div>
           <div class="header">
-            <input type="checkbox" id="submitBox"onClick={this.testfunction} ></input>
+            <input type="radio" id="submitBox1"onClick={this.testfunction} ></input>
               <label htmlFor="JA">Ja</label>
               <p></p>
-              <input type="checkbox" id="submitBox"onClick={this.testfunction} ></input>
+              <input type="radio" id="submitBox2" ></input>
               <label htmlFor="NE">Nein</label>
-            <my-button onClick={this.handelCancel} ques-opt="speichern"> </my-button>
+            <my-button onClick={this.testfunction} ques-opt="speichern" > </my-button>
             
               </div>
                 </div>
