@@ -66,8 +66,6 @@ export namespace Components {
         "image": any;
         "text": any;
     }
-    interface MySlider {
-    }
     interface StarRating {
     }
 }
@@ -144,12 +142,6 @@ declare global {
         prototype: HTMLMySectionElement;
         new (): HTMLMySectionElement;
     };
-    interface HTMLMySliderElement extends Components.MySlider, HTMLStencilElement {
-    }
-    var HTMLMySliderElement: {
-        prototype: HTMLMySliderElement;
-        new (): HTMLMySliderElement;
-    };
     interface HTMLStarRatingElement extends Components.StarRating, HTMLStencilElement {
     }
     var HTMLStarRatingElement: {
@@ -169,7 +161,6 @@ declare global {
         "my-links": HTMLMyLinksElement;
         "my-navigation": HTMLMyNavigationElement;
         "my-section": HTMLMySectionElement;
-        "my-slider": HTMLMySliderElement;
         "star-rating": HTMLStarRatingElement;
     }
 }
@@ -235,8 +226,6 @@ declare namespace LocalJSX {
         "image"?: any;
         "text"?: any;
     }
-    interface MySlider {
-    }
     interface StarRating {
     }
     interface IntrinsicElements {
@@ -252,7 +241,6 @@ declare namespace LocalJSX {
         "my-links": MyLinks;
         "my-navigation": MyNavigation;
         "my-section": MySection;
-        "my-slider": MySlider;
         "star-rating": StarRating;
     }
 }
@@ -272,7 +260,6 @@ declare module "@stencil/core" {
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
             "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
-            "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
         }
     }
