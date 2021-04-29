@@ -38,13 +38,6 @@ export namespace Components {
     }
     interface StarRating {
     }
-    interface TestComponent {
-        "age": number;
-        "animal": string;
-        "habitat": string;
-        "image": string;
-        "weight": string;
-    }
 }
 declare global {
     interface HTMLAnimalCardElement extends Components.AnimalCard, HTMLStencilElement {
@@ -83,12 +76,6 @@ declare global {
         prototype: HTMLStarRatingElement;
         new (): HTMLStarRatingElement;
     };
-    interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
-    }
-    var HTMLTestComponentElement: {
-        prototype: HTMLTestComponentElement;
-        new (): HTMLTestComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "animal-card": HTMLAnimalCardElement;
         "example-component": HTMLExampleComponentElement;
@@ -96,7 +83,6 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-gallery": HTMLMyGalleryElement;
         "star-rating": HTMLStarRatingElement;
-        "test-component": HTMLTestComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -133,13 +119,6 @@ declare namespace LocalJSX {
     }
     interface StarRating {
     }
-    interface TestComponent {
-        "age"?: number;
-        "animal"?: string;
-        "habitat"?: string;
-        "image"?: string;
-        "weight"?: string;
-    }
     interface IntrinsicElements {
         "animal-card": AnimalCard;
         "example-component": ExampleComponent;
@@ -147,7 +126,6 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "my-gallery": MyGallery;
         "star-rating": StarRating;
-        "test-component": TestComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -160,7 +138,6 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
-            "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
         }
     }
 }
