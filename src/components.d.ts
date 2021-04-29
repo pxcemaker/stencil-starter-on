@@ -43,6 +43,15 @@ export namespace Components {
     interface MyHeader {
         "headerTitel": string;
     }
+    interface MyNavigation {
+        "Bewertung": string;
+        "Galerie": string;
+        "Informationen": string;
+        "Kontakt": string;
+        "Startseite": string;
+    }
+    interface MyScrollbutton {
+    }
     interface MySection {
         "headline": any;
         "image": any;
@@ -98,6 +107,18 @@ declare global {
         prototype: HTMLMyHeaderElement;
         new (): HTMLMyHeaderElement;
     };
+    interface HTMLMyNavigationElement extends Components.MyNavigation, HTMLStencilElement {
+    }
+    var HTMLMyNavigationElement: {
+        prototype: HTMLMyNavigationElement;
+        new (): HTMLMyNavigationElement;
+    };
+    interface HTMLMyScrollbuttonElement extends Components.MyScrollbutton, HTMLStencilElement {
+    }
+    var HTMLMyScrollbuttonElement: {
+        prototype: HTMLMyScrollbuttonElement;
+        new (): HTMLMyScrollbuttonElement;
+    };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
     var HTMLMySectionElement: {
@@ -113,6 +134,8 @@ declare global {
         "my-contact": HTMLMyContactElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
+        "my-navigation": HTMLMyNavigationElement;
+        "my-scrollbutton": HTMLMyScrollbuttonElement;
         "my-section": HTMLMySectionElement;
     }
 }
@@ -155,6 +178,15 @@ declare namespace LocalJSX {
     interface MyHeader {
         "headerTitel"?: string;
     }
+    interface MyNavigation {
+        "Bewertung"?: string;
+        "Galerie"?: string;
+        "Informationen"?: string;
+        "Kontakt"?: string;
+        "Startseite"?: string;
+    }
+    interface MyScrollbutton {
+    }
     interface MySection {
         "headline"?: any;
         "image"?: any;
@@ -169,6 +201,8 @@ declare namespace LocalJSX {
         "my-contact": MyContact;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
+        "my-navigation": MyNavigation;
+        "my-scrollbutton": MyScrollbutton;
         "my-section": MySection;
     }
 }
@@ -184,6 +218,8 @@ declare module "@stencil/core" {
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
+            "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
+            "my-scrollbutton": LocalJSX.MyScrollbutton & JSXBase.HTMLAttributes<HTMLMyScrollbuttonElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
         }
     }
