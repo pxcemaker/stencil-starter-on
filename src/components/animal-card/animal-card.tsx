@@ -35,7 +35,7 @@ export class TestComponent {
     return (
       <Host>
         <div class="animal-card">
-          <img src= {getAssetPath(` ./assets/${this.image}`)} alt={this.animal}/>
+          <img src= {getAssetPath(` ../assets/${this.image}`)} alt={this.animal}/>
           <div>
              <h3 id="animal-name"class="small-title">{this.animal}</h3>
             <div class={this.showInfo}>
