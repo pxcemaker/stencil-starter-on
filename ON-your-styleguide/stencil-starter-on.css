@@ -1,0 +1,6 @@
+:root {
+  --app-example-var: black;
+}
+body {
+  background-color: rgb(99, 95, 91);
+}

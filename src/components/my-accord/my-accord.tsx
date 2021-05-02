@@ -1,4 +1,4 @@
-import { Component,  h, Prop,Event, EventEmitter, Element, Host, Listen } from '@stencil/core';
+import { Component,  h, Prop,Event, EventEmitter, Element, Host} from '@stencil/core';
 
 @Component({
   tag: 'my-accord',
