@@ -38,6 +38,16 @@ export namespace Components {
     }
     interface MyContact {
     }
+    interface MyFooter {
+        "Adresse": string;
+        "Datenschutz": string;
+        "Hausnummer": number;
+        "Impressum": string;
+        "Kontakt": string;
+        "Name": string;
+        "Postleitzahl": number;
+        "Stadt": string;
+    }
     interface MyGallery {
     }
     interface MyHeader {
@@ -46,6 +56,8 @@ export namespace Components {
     interface MyLinks {
         "text1": any;
         "text2": any;
+    }
+    interface MyPictures {
     }
     interface MySection {
         "headline": any;
@@ -90,6 +102,12 @@ declare global {
         prototype: HTMLMyContactElement;
         new (): HTMLMyContactElement;
     };
+    interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
+    }
+    var HTMLMyFooterElement: {
+        prototype: HTMLMyFooterElement;
+        new (): HTMLMyFooterElement;
+    };
     interface HTMLMyGalleryElement extends Components.MyGallery, HTMLStencilElement {
     }
     var HTMLMyGalleryElement: {
@@ -108,6 +126,12 @@ declare global {
         prototype: HTMLMyLinksElement;
         new (): HTMLMyLinksElement;
     };
+    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
+    }
+    var HTMLMyPicturesElement: {
+        prototype: HTMLMyPicturesElement;
+        new (): HTMLMyPicturesElement;
+    };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
     var HTMLMySectionElement: {
@@ -121,9 +145,11 @@ declare global {
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
+        "my-footer": HTMLMyFooterElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
+        "my-pictures": HTMLMyPicturesElement;
         "my-section": HTMLMySectionElement;
     }
 }
@@ -161,6 +187,16 @@ declare namespace LocalJSX {
     }
     interface MyContact {
     }
+    interface MyFooter {
+        "Adresse"?: string;
+        "Datenschutz"?: string;
+        "Hausnummer"?: number;
+        "Impressum"?: string;
+        "Kontakt"?: string;
+        "Name"?: string;
+        "Postleitzahl"?: number;
+        "Stadt"?: string;
+    }
     interface MyGallery {
     }
     interface MyHeader {
@@ -169,6 +205,8 @@ declare namespace LocalJSX {
     interface MyLinks {
         "text1"?: any;
         "text2"?: any;
+    }
+    interface MyPictures {
     }
     interface MySection {
         "headline"?: any;
@@ -182,9 +220,11 @@ declare namespace LocalJSX {
         "my-button": MyButton;
         "my-component": MyComponent;
         "my-contact": MyContact;
+        "my-footer": MyFooter;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
         "my-links": MyLinks;
+        "my-pictures": MyPictures;
         "my-section": MySection;
     }
 }
@@ -198,9 +238,11 @@ declare module "@stencil/core" {
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
+            "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
+            "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
         }
     }
