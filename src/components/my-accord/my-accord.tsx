@@ -1,4 +1,4 @@
-import { Component,  h, Prop,Event, EventEmitter, Element, Host } from '@stencil/core';
+import { Component,  h, Prop,Event, EventEmitter, Element, Host, Listen } from '@stencil/core';
 
 @Component({
   tag: 'my-accord',
@@ -26,50 +26,20 @@ isopen:boolean;
     this.isopen =true;
     
     
+    
   }
+setCookie() {
 
- 
-
-  testfunction(){
-    let idCounter = 0;
-    idCounter = localStorage.length;
-    console.log("submit")
-    let inputYes = document.querySelector('#submitBox1');
-    const  inputNo = document.querySelector("#submitBox2");
-    let count:string;  
-     count = idCounter.toString()
-
-    let obj = {
-      "Ja": inputYes,
-      "Nein": inputNo,
-      "setCookie": count,
-      "test": this.check,
+    document.cookie = "Cookie wurde gesetzt"
   }
+  
 
-  localStorage.setItem(count ,JSON.stringify(obj)); // Hilfe zum LocalStorage https://www.mediaevent.de/javascript/local-storage.html
-  //console.log(localStorage.getItem(listenId));
-console.log("stringyfied look in local storage")
-
-if(count != "" || this.check ===false){
-  this.check =true;
-
-}
-  return obj;
-
-}
   
   
-  
-didCompLoad(){
-  console.log("it is successfully loaded, your accordeon")
-
- 
-}
-
  
   render() {
     return (
-      <Host class={this.check ? 'hide' : 'modal-wrapper isopen'}>
+      <Host >   
       <div class={this.isopen ? 'modal-wrapper' : 'modal-wrapper isopen'}>
         <div class="modal-overlay" onClick={this.handelCancel}/>
         <div class="modal">
@@ -79,17 +49,13 @@ didCompLoad(){
               <h3>Möchten Sie die Cookies akzeptieren ?</h3>
               </div>
           <div class="header">
-            <input type="radio" id="submitBox1"onClick={this.testfunction} ></input>
+            <input type="radio" id="submitBox1"onClick={this.setCookie} ></input>
               <label htmlFor="JA">Ja</label>
               <p></p>
-              <input type="radio" id="submitBox2" ></input>
-              <label htmlFor="NE">Nein</label>
-            <my-button onClick={this.testfunction} ques-opt="speichern" > </my-button>
-            
+            <my-button onClick={this.handelCancel} ques-opt="speichern" > </my-button>
               </div>
                 </div>
               </div>
-              
               </Host>
     );
   }
