@@ -153,19 +153,17 @@ declare global {
         prototype: HTMLMyLinksElement;
         new (): HTMLMyLinksElement;
     };
-<<<<<<< HEAD
-    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
-    }
-    var HTMLMyPicturesElement: {
-        prototype: HTMLMyPicturesElement;
-        new (): HTMLMyPicturesElement;
-=======
     interface HTMLMyNavigationElement extends Components.MyNavigation, HTMLStencilElement {
     }
     var HTMLMyNavigationElement: {
         prototype: HTMLMyNavigationElement;
         new (): HTMLMyNavigationElement;
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
+    };
+    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
+    }
+    var HTMLMyPicturesElement: {
+        prototype: HTMLMyPicturesElement;
+        new (): HTMLMyPicturesElement;
     };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
@@ -197,11 +195,8 @@ declare global {
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
-<<<<<<< HEAD
-        "my-pictures": HTMLMyPicturesElement;
-=======
         "my-navigation": HTMLMyNavigationElement;
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
+        "my-pictures": HTMLMyPicturesElement;
         "my-section": HTMLMySectionElement;
         "my-slider": HTMLMySliderElement;
         "star-rating": HTMLStarRatingElement;
@@ -300,11 +295,8 @@ declare namespace LocalJSX {
         "my-gallery": MyGallery;
         "my-header": MyHeader;
         "my-links": MyLinks;
-<<<<<<< HEAD
-        "my-pictures": MyPictures;
-=======
         "my-navigation": MyNavigation;
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
+        "my-pictures": MyPictures;
         "my-section": MySection;
         "my-slider": MySlider;
         "star-rating": StarRating;
@@ -325,11 +317,8 @@ declare module "@stencil/core" {
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
-<<<<<<< HEAD
-            "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
-=======
             "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
+            "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
