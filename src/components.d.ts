@@ -51,8 +51,8 @@ export namespace Components {
         "headerTitel": string;
     }
     interface MyLinks {
-        "text1": any;
-        "text2": any;
+        "text1": string;
+        "text2": string;
     }
     interface MyNavigation {
         "Bewertung": string;
@@ -67,6 +67,9 @@ export namespace Components {
         "text": any;
     }
     interface MySlider {
+        "image1": string;
+        "image2": string;
+        "image3": string;
     }
     interface StarRating {
     }
@@ -220,8 +223,8 @@ declare namespace LocalJSX {
         "headerTitel"?: string;
     }
     interface MyLinks {
-        "text1"?: any;
-        "text2"?: any;
+        "text1"?: string;
+        "text2"?: string;
     }
     interface MyNavigation {
         "Bewertung"?: string;
@@ -236,6 +239,9 @@ declare namespace LocalJSX {
         "text"?: any;
     }
     interface MySlider {
+        "image1"?: string;
+        "image2"?: string;
+        "image3"?: string;
     }
     interface StarRating {
     }
