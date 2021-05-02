@@ -7,8 +7,8 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class MyLinks {
 
-@Prop() text1;
-@Prop() text2;
+@Prop() text1:string = "aquarium";
+@Prop() text2:string = "tierpark";
 
   render() {
     return (
@@ -17,13 +17,13 @@ export class MyLinks {
         <div class="all">
           <a href="#">
             <div class="section1">
-                <p>aquarium</p>
+                <p>{this.text1}</p>
             </div>
           </a>
         
           <a href="#">
             <div class="section2">
-                <p>tierpark</p>
+                <p>{this.text2}</p>
             </div>
           </a>
         </div>

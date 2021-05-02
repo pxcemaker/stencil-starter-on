@@ -57,3 +57,6 @@ p {
 .isopen .modal {
   transform: translate(-50%, 90px);
 }
+.hide {
+  visibility: hidden;
+}
