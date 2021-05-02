@@ -13,6 +13,8 @@
 
 <body>
     
+    <my-navigation Kontakt="Kontakt", Bewertung="Bewertung", Informationen="Informationen", Startseite="Startseite" Galerie="Galerie"></my-navigation>
+
        <animal-card image="Braunbaer.jpg" animal="Braunbär" age="13" habitat="Wald" weight="120 kg"></animal-card>
       
        <my-gallery></my-gallery>
@@ -32,13 +34,15 @@
        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
        duo dolores et ea rebum." headline="Überschrift"></my-section>
+ 
        <star-rating></star-rating>
         <my-links></my-links>
+       
+        <my-scrollbutton>
         
+        </my-scrollbutton>
 
-       <my-scrollbutton>
-        
-       </my-scrollbutton>
+      
 </body>
 <script>
 let btn = document.querySelector('my-button')
@@ -53,5 +57,7 @@ btn1.addEventListener('click', function(){
     schulacc.isOpen = true;
 })
 </script>
+
+
 
 </html>
