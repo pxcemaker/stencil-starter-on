@@ -73,6 +73,8 @@ export namespace Components {
     }
     interface MyPictures {
     }
+    interface MyScrollbutton {
+    }
     interface MySection {
         "headline": any;
         "image": any;
@@ -165,6 +167,12 @@ declare global {
         prototype: HTMLMyPicturesElement;
         new (): HTMLMyPicturesElement;
     };
+    interface HTMLMyScrollbuttonElement extends Components.MyScrollbutton, HTMLStencilElement {
+    }
+    var HTMLMyScrollbuttonElement: {
+        prototype: HTMLMyScrollbuttonElement;
+        new (): HTMLMyScrollbuttonElement;
+    };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
     var HTMLMySectionElement: {
@@ -197,6 +205,7 @@ declare global {
         "my-links": HTMLMyLinksElement;
         "my-navigation": HTMLMyNavigationElement;
         "my-pictures": HTMLMyPicturesElement;
+        "my-scrollbutton": HTMLMyScrollbuttonElement;
         "my-section": HTMLMySectionElement;
         "my-slider": HTMLMySliderElement;
         "star-rating": HTMLStarRatingElement;
@@ -271,6 +280,8 @@ declare namespace LocalJSX {
     }
     interface MyPictures {
     }
+    interface MyScrollbutton {
+    }
     interface MySection {
         "headline"?: any;
         "image"?: any;
@@ -297,6 +308,7 @@ declare namespace LocalJSX {
         "my-links": MyLinks;
         "my-navigation": MyNavigation;
         "my-pictures": MyPictures;
+        "my-scrollbutton": MyScrollbutton;
         "my-section": MySection;
         "my-slider": MySlider;
         "star-rating": StarRating;
@@ -319,6 +331,7 @@ declare module "@stencil/core" {
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
             "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
             "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
+            "my-scrollbutton": LocalJSX.MyScrollbutton & JSXBase.HTMLAttributes<HTMLMyScrollbuttonElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
