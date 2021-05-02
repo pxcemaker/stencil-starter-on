@@ -45,6 +45,16 @@ export namespace Components {
     }
     interface MyContact {
     }
+    interface MyFooter {
+        "Adresse": string;
+        "Datenschutz": string;
+        "Hausnummer": number;
+        "Impressum": string;
+        "Kontakt": string;
+        "Name": string;
+        "Postleitzahl": number;
+        "Stadt": string;
+    }
     interface MyGallery {
     }
     interface MyHeader {
@@ -60,6 +70,8 @@ export namespace Components {
         "Informationen": string;
         "Kontakt": string;
         "Startseite": string;
+    }
+    interface MyPictures {
     }
     interface MySection {
         "headline": any;
@@ -117,6 +129,12 @@ declare global {
         prototype: HTMLMyContactElement;
         new (): HTMLMyContactElement;
     };
+    interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
+    }
+    var HTMLMyFooterElement: {
+        prototype: HTMLMyFooterElement;
+        new (): HTMLMyFooterElement;
+    };
     interface HTMLMyGalleryElement extends Components.MyGallery, HTMLStencilElement {
     }
     var HTMLMyGalleryElement: {
@@ -135,11 +153,19 @@ declare global {
         prototype: HTMLMyLinksElement;
         new (): HTMLMyLinksElement;
     };
+<<<<<<< HEAD
+    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
+    }
+    var HTMLMyPicturesElement: {
+        prototype: HTMLMyPicturesElement;
+        new (): HTMLMyPicturesElement;
+=======
     interface HTMLMyNavigationElement extends Components.MyNavigation, HTMLStencilElement {
     }
     var HTMLMyNavigationElement: {
         prototype: HTMLMyNavigationElement;
         new (): HTMLMyNavigationElement;
+>>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
     };
     interface HTMLMySectionElement extends Components.MySection, HTMLStencilElement {
     }
@@ -167,10 +193,15 @@ declare global {
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
+        "my-footer": HTMLMyFooterElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
+<<<<<<< HEAD
+        "my-pictures": HTMLMyPicturesElement;
+=======
         "my-navigation": HTMLMyNavigationElement;
+>>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
         "my-section": HTMLMySectionElement;
         "my-slider": HTMLMySliderElement;
         "star-rating": HTMLStarRatingElement;
@@ -217,6 +248,16 @@ declare namespace LocalJSX {
     }
     interface MyContact {
     }
+    interface MyFooter {
+        "Adresse"?: string;
+        "Datenschutz"?: string;
+        "Hausnummer"?: number;
+        "Impressum"?: string;
+        "Kontakt"?: string;
+        "Name"?: string;
+        "Postleitzahl"?: number;
+        "Stadt"?: string;
+    }
     interface MyGallery {
     }
     interface MyHeader {
@@ -232,6 +273,8 @@ declare namespace LocalJSX {
         "Informationen"?: string;
         "Kontakt"?: string;
         "Startseite"?: string;
+    }
+    interface MyPictures {
     }
     interface MySection {
         "headline"?: any;
@@ -253,10 +296,15 @@ declare namespace LocalJSX {
         "my-button": MyButton;
         "my-component": MyComponent;
         "my-contact": MyContact;
+        "my-footer": MyFooter;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
         "my-links": MyLinks;
+<<<<<<< HEAD
+        "my-pictures": MyPictures;
+=======
         "my-navigation": MyNavigation;
+>>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
         "my-section": MySection;
         "my-slider": MySlider;
         "star-rating": StarRating;
@@ -273,10 +321,15 @@ declare module "@stencil/core" {
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
+            "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
+<<<<<<< HEAD
+            "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
+=======
             "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
+>>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
