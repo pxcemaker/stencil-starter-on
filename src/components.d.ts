@@ -17,11 +17,6 @@ export namespace Components {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
     }
-    interface MyAccord {
-        "check": boolean;
-        "isopen": boolean;
-        "titelAccord": string;
-    }
     interface MyAccordion {
         "accordText": string;
         "isOpen": boolean;
@@ -44,6 +39,10 @@ export namespace Components {
         "middle": string;
     }
     interface MyContact {
+    }
+    interface MyCookie {
+        "check": boolean;
+        "isopen": boolean;
     }
     interface MyFooter {
         "Adresse": string;
@@ -101,12 +100,6 @@ declare global {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
     };
-    interface HTMLMyAccordElement extends Components.MyAccord, HTMLStencilElement {
-    }
-    var HTMLMyAccordElement: {
-        prototype: HTMLMyAccordElement;
-        new (): HTMLMyAccordElement;
-    };
     interface HTMLMyAccordionElement extends Components.MyAccordion, HTMLStencilElement {
     }
     var HTMLMyAccordionElement: {
@@ -130,6 +123,12 @@ declare global {
     var HTMLMyContactElement: {
         prototype: HTMLMyContactElement;
         new (): HTMLMyContactElement;
+    };
+    interface HTMLMyCookieElement extends Components.MyCookie, HTMLStencilElement {
+    }
+    var HTMLMyCookieElement: {
+        prototype: HTMLMyCookieElement;
+        new (): HTMLMyCookieElement;
     };
     interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
     }
@@ -194,11 +193,11 @@ declare global {
     interface HTMLElementTagNameMap {
         "animal-card": HTMLAnimalCardElement;
         "example-component": HTMLExampleComponentElement;
-        "my-accord": HTMLMyAccordElement;
         "my-accordion": HTMLMyAccordionElement;
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
+        "my-cookie": HTMLMyCookieElement;
         "my-footer": HTMLMyFooterElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
@@ -223,12 +222,6 @@ declare namespace LocalJSX {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
     }
-    interface MyAccord {
-        "check"?: boolean;
-        "isopen"?: boolean;
-        "onOpenaccord"?: (event: CustomEvent<string>) => void;
-        "titelAccord"?: string;
-    }
     interface MyAccordion {
         "accordText"?: string;
         "isOpen"?: boolean;
@@ -251,6 +244,10 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface MyContact {
+    }
+    interface MyCookie {
+        "check"?: boolean;
+        "isopen"?: boolean;
     }
     interface MyFooter {
         "Adresse"?: string;
@@ -297,11 +294,11 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "animal-card": AnimalCard;
         "example-component": ExampleComponent;
-        "my-accord": MyAccord;
         "my-accordion": MyAccordion;
         "my-button": MyButton;
         "my-component": MyComponent;
         "my-contact": MyContact;
+        "my-cookie": MyCookie;
         "my-footer": MyFooter;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
@@ -320,11 +317,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "animal-card": LocalJSX.AnimalCard & JSXBase.HTMLAttributes<HTMLAnimalCardElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
-            "my-accord": LocalJSX.MyAccord & JSXBase.HTMLAttributes<HTMLMyAccordElement>;
             "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
+            "my-cookie": LocalJSX.MyCookie & JSXBase.HTMLAttributes<HTMLMyCookieElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;

@@ -16,12 +16,12 @@
 
 ### Used by
 
- - [my-accord](../my-accord)
+ - [my-cookie](../my-cookie)
 
 ### Graph
 ```mermaid
 graph TD;
-  my-accord --> my-button
+  my-cookie --> my-button
   style my-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
