@@ -13,3 +13,7 @@ h3 {
   padding: 20px;
   background-color: #f3eac8;
 }
+
+.animation {
+  visibility: hidden;
+}

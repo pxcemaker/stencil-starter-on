@@ -11,7 +11,6 @@ export class MyButton {
   render() {
     return (
       <Host>
-        <slot></slot>
         <button> {this.quesOpt}</button>
       </Host>
     );

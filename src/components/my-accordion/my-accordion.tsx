@@ -12,8 +12,9 @@ export class MyAccordion {
   @Prop() accordText: string;
 
 
- clickHandler() {
+ clickHandler(ev: MouseEvent) {
     
+    console.log(ev)
     this.isOpen= false
 
   }
@@ -22,7 +23,7 @@ export class MyAccordion {
     return (
       
       <Host class={this.isOpen ? 'accordion' : 'hide'}>
-   <div class="accordion" onClick={this.clickHandler}>
+   <div class="accordion" onClick={(ev)=>this.clickHandler(ev)}>
        <p> {this.accordText}</p>
      </div>
    

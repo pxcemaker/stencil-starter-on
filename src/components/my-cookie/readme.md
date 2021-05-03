@@ -9,7 +9,6 @@
 
 | Property | Attribute | Description | Type      | Default     |
 | -------- | --------- | ----------- | --------- | ----------- |
-| `check`  | `check`   |             | `boolean` | `undefined` |
 | `isopen` | `isopen`  |             | `boolean` | `undefined` |
 
 
