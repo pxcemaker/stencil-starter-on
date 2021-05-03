@@ -41,7 +41,6 @@ export namespace Components {
     interface MyContact {
     }
     interface MyCookie {
-        "check": boolean;
         "isopen": boolean;
     }
     interface MyFooter {
@@ -246,7 +245,6 @@ declare namespace LocalJSX {
     interface MyContact {
     }
     interface MyCookie {
-        "check"?: boolean;
         "isopen"?: boolean;
     }
     interface MyFooter {
