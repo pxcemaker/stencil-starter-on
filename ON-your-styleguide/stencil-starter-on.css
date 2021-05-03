@@ -2,12 +2,7 @@
   --app-example-var: black;
 }
 body {
-  background-color: rgb(241, 213, 185);
+  background-color: #fff9e2;
 }
 
-my-accord {
-  margin: 100px;
-}
-my-navigation {
-  margin: 100px;
-}
+

@@ -25,7 +25,7 @@ export class MyAccordion {
   render() {
     return (
       
-      <Host class={this.isOpen ? 'showRadio' : 'hide'}>
+      <Host class={this.isOpen ? 'accordion' : 'hide'}>
    <div class="accordion" onClick={(ev)=>this.exampleHandler(ev)}>
        <p> {this.accordText}</p>
      </div>

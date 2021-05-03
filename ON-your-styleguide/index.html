@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/dist/stencil-starter-on/stencil-starter-on.esm.js" type="module"></script>
-    <link rel="stylesheet" href="stencil-starter-on.css" />
+    <link rel="stylesheet" href="/ON-your-styleguide/stencil-starter-on.css" />
     <title>your design guide</title>
     <script type="text/javascript" src="/ON-your-styleguide/script.js" defer></script>
 </head>
@@ -15,47 +15,44 @@
 
     
     <my-navigation Kontakt="Kontakt", Bewertung="Bewertung", Informationen="Informationen", Startseite="Startseite" Galerie="Galerie"></my-navigation>
+    <my-slider></my-slider>
 
-       <animal-card image="Braunbaer.jpg" animal="Braunbär" age="13" habitat="Wald" weight="120 kg"></animal-card>
+    <my-section image="panda.jpg" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+    duo dolores et ea rebum." headline="Überschrift"></my-section>
       
        <my-gallery></my-gallery>
-       <my-slider></my-slider>
+       <animal-card image="Braunbaer.jpg" animal="Braunbär" age="13" habitat="Wald" weight="120 kg"></animal-card>
+
+       <my-pictures></my-pictures>
+       <my-header header-titel="So können Sie uns erreichen!"></my-header>
        <my-contact></my-contact>
-       <my-pictures></my-pictures> 
+       <star-rating></star-rating>
+      
        <my-accord></my-accord>
 
        <my-header header-titel="Das ist unser FAQ!"></my-header>
        <my-button ques-opt="Wie lange hat unser ZOO offen ?"></my-button>
-       <my-accordion accord-text="Jeden Tag von 9.00 Uhr - 18.00 Uhr, außer an Feiertagen"></my-accordion>
+       <my-accordion accord-text="Jeden Tag von 9.00 Uhr - 18.00 Uhr, außer an Feiertagen."></my-accordion>
 
        <my-button ques-opt="Is unser ZOO für Schulgruppen geeignet ?" id="schul"></my-button>
        <my-accordion accord-text="Ja! Man kann gerne mit mehreren Schulgruppen kommen. Man muss sich legendlich anmelden."
        id="schulenacc"></my-accordion>
 
-       <my-section image="panda.jpg" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-       aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-       no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
-       nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
-       duo dolores et ea rebum." headline="Überschrift"></my-section>
+       
  
-       <star-rating></star-rating>
-        <my-links></my-links>
+       
        
         <my-scrollbutton>
         
         </my-scrollbutton>
-
+       
         <my-links text1="aquarium" text2="tierpark"></my-links>
-<<<<<<< HEAD
         <my-footer Kontakt = "Kontakt", Impressum = "Impressum", Datenschutz ="Datenschutz", 
         Name="Zoologischer Garten Berlin", Adresse="Hardenbergplatz", Hausnummer=8, Postleitzahl=10787, Stadt="Berlin">
         </my-footer>
-=======
-        <my-pictures></my-pictures> 
-    <my-footer kontakt = "Kontakt", impressum = "Impressum", datenschutz ="Datenschutz", 
-    name="Zoologischer Garten Berlin", adresse="Hardenbergplatz", hausnummer=8, postleitzahl=10787, stadt="Berlin">
-    </my-footer>
->>>>>>> 986073e9e5291a25aee767153d9e15b26539110a
 
         
      

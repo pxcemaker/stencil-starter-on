@@ -1,10 +1,10 @@
 :host {
   display: block;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button {
-  background-color: #e7d95dfa; /* Green */
-  width: 50%;
+  background-color: darkkhaki;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -13,4 +13,6 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  width: 50%;
+  margin-left: 25%;
 }

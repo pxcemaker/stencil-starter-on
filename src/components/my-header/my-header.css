@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
 :host {
-  display: block;
+  display: inline-block;
+  position: relative;
+  width: 100%;
 }
 h1,
 h2,
 h3 {
   font-size: 40px;
-  font-family: 'Staatliches', cursive;
-  color: rgb(107, 119, 38);
-  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  color: darkkhaki;
+  text-align: center;
   padding: 20px;
-  background-color: cornsilk;
+  background-color: #f3eac8;
 }
