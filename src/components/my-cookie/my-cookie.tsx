@@ -14,7 +14,7 @@ export class MyCookie {
   
   @Prop()
   isopen:boolean;
-  @Prop() check:boolean;
+
   
   private handelCancel = ()=> {
       this.isopen =true;
