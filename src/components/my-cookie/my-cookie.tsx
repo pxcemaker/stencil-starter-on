@@ -26,11 +26,7 @@ export class MyCookie {
   
       document.cookie = "Cookie wurde gesetzt"
     }
-    
-  
-    
-    
-   
+ 
     render() {
       return (
         <Host >   
