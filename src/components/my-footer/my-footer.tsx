@@ -7,14 +7,14 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class MyFooter {
 
-@Prop() Name: string;
-@Prop() Adresse: string;
-@Prop() Hausnummer: number;
-@Prop() Postleitzahl: number;
-@Prop() Stadt: string;
-@Prop() Impressum: string;
-@Prop() Datenschutz: string;
-@Prop() Kontakt: string;
+@Prop() name: string;
+@Prop() adresse: string;
+@Prop() hausnummer: number;
+@Prop() postleitzahl: number;
+@Prop() stadt: string;
+@Prop() impressum: string;
+@Prop() datenschutz: string;
+@Prop() kontakt: string;
 
   
     render() {
@@ -25,15 +25,15 @@ export class MyFooter {
               <img src="zoo.png"></img>
             </div>
             <div class="data">
-              <p>{this.Name}</p>
-              <p>{this.Adresse} {this.Hausnummer}</p>
-              <p>{this.Postleitzahl} {this.Stadt}</p>
+              <p>{this.name}</p>
+              <p>{this.adresse} {this.hausnummer}</p>
+              <p>{this.postleitzahl} {this.stadt}</p>
             </div>
 
             <div class="link">  
-              <a href="#"><p>{this.Kontakt}</p></a>
-              <a href="#"><p>{this.Impressum}</p></a>
-              <a href="#"><p>{this.Datenschutz}</p></a>
+              <a href="#"><p>{this.kontakt}</p></a>
+              <a href="#"><p>{this.impressum}</p></a>
+              <a href="#"><p>{this.datenschutz}</p></a>
             </div>
 
             <div class="icons">
