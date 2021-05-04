@@ -71,11 +71,9 @@ export namespace Components {
         "Kontakt": string;
         "Startseite": string;
     }
-<<<<<<< HEAD
-    interface MyScrollbutton {
-=======
     interface MyPictures {
->>>>>>> 986073e9e5291a25aee767153d9e15b26539110a
+    }
+    interface MyScrollbutton {
     }
     interface MySection {
         "headline": any;
@@ -206,15 +204,8 @@ declare global {
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
         "my-navigation": HTMLMyNavigationElement;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "my-scrollbutton": HTMLMyScrollbuttonElement;
-=======
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
->>>>>>> 986073e9e5291a25aee767153d9e15b26539110a
-=======
         "my-pictures": HTMLMyPicturesElement;
->>>>>>> d73b44c5af18ee54595588c87d393a4ca3a1e7cc
+        "my-scrollbutton": HTMLMyScrollbuttonElement;
         "my-section": HTMLMySectionElement;
         "my-slider": HTMLMySliderElement;
         "star-rating": HTMLStarRatingElement;
@@ -287,11 +278,9 @@ declare namespace LocalJSX {
         "Kontakt"?: string;
         "Startseite"?: string;
     }
-<<<<<<< HEAD
-    interface MyScrollbutton {
-=======
     interface MyPictures {
->>>>>>> 986073e9e5291a25aee767153d9e15b26539110a
+    }
+    interface MyScrollbutton {
     }
     interface MySection {
         "headline"?: any;
@@ -318,15 +307,8 @@ declare namespace LocalJSX {
         "my-header": MyHeader;
         "my-links": MyLinks;
         "my-navigation": MyNavigation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "my-scrollbutton": MyScrollbutton;
-=======
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
->>>>>>> 986073e9e5291a25aee767153d9e15b26539110a
-=======
         "my-pictures": MyPictures;
->>>>>>> d73b44c5af18ee54595588c87d393a4ca3a1e7cc
+        "my-scrollbutton": MyScrollbutton;
         "my-section": MySection;
         "my-slider": MySlider;
         "star-rating": StarRating;
@@ -348,15 +330,8 @@ declare module "@stencil/core" {
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
             "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "my-scrollbutton": LocalJSX.MyScrollbutton & JSXBase.HTMLAttributes<HTMLMyScrollbuttonElement>;
-=======
->>>>>>> a1caf69bf4e544f066ab3157a7e6a3b234993030
->>>>>>> 986073e9e5291a25aee767153d9e15b26539110a
-=======
             "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
->>>>>>> d73b44c5af18ee54595588c87d393a4ca3a1e7cc
+            "my-scrollbutton": LocalJSX.MyScrollbutton & JSXBase.HTMLAttributes<HTMLMyScrollbuttonElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "star-rating": LocalJSX.StarRating & JSXBase.HTMLAttributes<HTMLStarRatingElement>;
