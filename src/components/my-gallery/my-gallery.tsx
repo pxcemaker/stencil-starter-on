@@ -9,7 +9,7 @@ import { Component, Host, h,  State,  } from '@stencil/core';
 
 export class MyGallery {
 
-@State() items: string[] = ["campfire.png", "https://via.placeholder.com/150"];
+@State() items: string[] = ["affe.jpg", "https://via.placeholder.com/150"];
 //@State() internalItems: string[];
 
 /*componentWillLoad() {
@@ -30,7 +30,7 @@ parseOptions() {
       <Host>
 
     <div class="gallery">
-
+          
             <div class="item1">
               <a href={this.items[0]}><img src={this.items[0]}></img></a>
             </div>
@@ -44,6 +44,22 @@ parseOptions() {
             </div>
             
              <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+            
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+
+            <div class="item1">
+              <a href={this.items[1]}><img src={this.items[1]}></img></a>
+            </div>
+            
+            <div class="item1">
               <a href={this.items[1]}><img src={this.items[1]}></img></a>
             </div>
 
