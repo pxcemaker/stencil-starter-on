@@ -9,14 +9,14 @@
 
 | Property       | Attribute      | Description | Type     | Default     |
 | -------------- | -------------- | ----------- | -------- | ----------- |
-| `Adresse`      | `adresse`      |             | `string` | `undefined` |
-| `Datenschutz`  | `datenschutz`  |             | `string` | `undefined` |
-| `Hausnummer`   | `hausnummer`   |             | `number` | `undefined` |
-| `Impressum`    | `impressum`    |             | `string` | `undefined` |
-| `Kontakt`      | `kontakt`      |             | `string` | `undefined` |
-| `Name`         | `name`         |             | `string` | `undefined` |
-| `Postleitzahl` | `postleitzahl` |             | `number` | `undefined` |
-| `Stadt`        | `stadt`        |             | `string` | `undefined` |
+| `adresse`      | `adresse`      |             | `string` | `undefined` |
+| `datenschutz`  | `datenschutz`  |             | `string` | `undefined` |
+| `hausnummer`   | `hausnummer`   |             | `number` | `undefined` |
+| `impressum`    | `impressum`    |             | `string` | `undefined` |
+| `kontakt`      | `kontakt`      |             | `string` | `undefined` |
+| `name`         | `name`         |             | `string` | `undefined` |
+| `postleitzahl` | `postleitzahl` |             | `number` | `undefined` |
+| `stadt`        | `stadt`        |             | `string` | `undefined` |
 
 
 ----------------------------------------------

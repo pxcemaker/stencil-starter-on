@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default      |
-| -------- | --------- | ----------- | -------- | ------------ |
-| `text1`  | `text-1`  |             | `string` | `"aquarium"` |
-| `text2`  | `text-2`  |             | `string` | `"tierpark"` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `text1`  | `text-1`  |             | `string` | `undefined` |
+| `text2`  | `text-2`  |             | `string` | `undefined` |
 
 
 ----------------------------------------------

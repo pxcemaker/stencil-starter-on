@@ -46,6 +46,7 @@ export namespace Components {
     interface MyFlipcard {
         "backText": string;
         "frontText": string;
+        "test": boolean;
     }
     interface MyFooter {
         "adresse": string;
@@ -252,6 +253,7 @@ declare namespace LocalJSX {
     interface MyFlipcard {
         "backText"?: string;
         "frontText"?: string;
+        "test"?: boolean;
     }
     interface MyFooter {
         "adresse"?: string;
