@@ -4,7 +4,9 @@
   height: 50%;
   font-family: 'Open Sans';
   line-height: 25px;
-  position: absolute;
+  position: relative;
+  display: block;
+  margin-top: 50px;
 }
 
 .text {
@@ -16,7 +18,7 @@
 }
 
 .image {
-  margin-top: -26.5%;
+  margin-top: -22%;
   margin-left: 10%;
   padding: 50px;
   position: absolute;

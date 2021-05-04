@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MyAccord } from '../my-accord';
+import { MyCookie } from '../my-cookie';
 
-describe('my-accord', () => {
+describe('my-cookie', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [MyAccord],
-      html: `<my-accord></my-accord>`,
+      components: [MyCookie],
+      html: `<my-cookie></my-cookie>`,
     });
     expect(page.root).toEqualHtml(`
-      <my-accord>
+      <my-cookie>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </my-accord>
+      </my-cookie>
     `);
   });
 });

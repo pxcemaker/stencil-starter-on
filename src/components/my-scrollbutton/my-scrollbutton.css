@@ -1,21 +1,22 @@
 :host {
   display: block;
+  z-index: 10;
 }
 
 button {
-background-color: red;
-box-sizing: border-box;
-float: right;
-border: none;
-color: white;
-padding: 15px 32px;
-margin: 5px;
-text-align: center;
-font-size: 16px;
-behavior: smooth;
+  background-color: #fee163;
+  box-sizing: border-box;
+  float: right;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  margin: 5px;
+  text-align: center;
+  font-size: 16px;
+  behavior: smooth;
 }
 
-
+/*
 .scrollTop {
   position: fixed; 
   width: 100%;
@@ -33,3 +34,5 @@ behavior: smooth;
 .scrollTop:hover{
   opacity: 1;
 }
+
+*/

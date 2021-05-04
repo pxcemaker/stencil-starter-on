@@ -12,21 +12,18 @@ export class MyAccordion {
   @Prop() accordText: string;
 
 
- exampleHandler(ev: MouseEvent) {
+ clickHandler(ev: MouseEvent) {
     
     console.log(ev)
     this.isOpen= false
-
-    
-
 
   }
 
   render() {
     return (
       
-      <Host class={this.isOpen ? 'showRadio' : 'hide'}>
-   <div class="accordion" onClick={(ev)=>this.exampleHandler(ev)}>
+      <Host class={this.isOpen ? 'accordion' : 'hide'}>
+   <div class="accordion" onClick={(ev)=>this.clickHandler(ev)}>
        <p> {this.accordText}</p>
      </div>
    

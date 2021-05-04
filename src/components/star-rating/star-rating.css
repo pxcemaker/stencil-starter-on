@@ -1,31 +1,35 @@
 :host {
-  display: block;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  margin: 20px;
+  left: 48%;
 }
 
-.star-rating label{
+.star-rating label {
   color: #ccc;
   cursor: pointer;
 }
 
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-  color:rgb(228, 170, 46);
+  color: rgb(228, 170, 46);
 }
 
-#star-wrapper{
+#star-wrapper {
+  position: relative;
 
-  position: absolute;
-  left: 50%;
+  display: inline-block;
   transform: translate(-50%, -50%);
   margin: 50px 0;
+  width: 250px;
+  text-align: center;
 }
 
-.star-rating input{
+.star-rating input {
   display: none;
 }
 
-.star-rating{
+.star-rating {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;

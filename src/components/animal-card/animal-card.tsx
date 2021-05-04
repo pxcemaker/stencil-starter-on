@@ -19,13 +19,13 @@ export class TestComponent {
     let animalName =document.querySelector("animal-card").shadowRoot.querySelector("#animal-name");
     if(this.showInfo=="false"){
       this.showInfo="true";
-      toggleInfo.innerHTML="Hide Info";
+      toggleInfo.innerHTML="Schließen";
       animalName.classList.replace("big-title", "small-title")
     
     }
     else{
       this.showInfo="false";
-      toggleInfo.innerHTML="Show Info";
+      toggleInfo.innerHTML="Mehr zeigen!";
       animalName.classList.replace("small-title", "big-title")
     }
   }
@@ -43,7 +43,7 @@ export class TestComponent {
               <p><strong>Natürlicher Lebensraum: </strong> {this.habitat}</p>
               <p><strong>Gewicht: </strong>{this.weight}</p>
             </div>
-            <button id="toggle-info" onClick={() => {this.handleMouseClick();}}>Hide Info</button>
+            <button id="toggle-info" onClick={() => {this.handleMouseClick();}}>Schließen</button>
           </div>
         </div>
       </Host>

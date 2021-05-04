@@ -1,19 +1,20 @@
 .gallery {
   display: grid;
-  grid-template-columns: 11% 11% 11%;
-  grid-template-rows: 168px 1fr 100px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 300px 3fr 200px;
   position: relative;
-  margin: 20px;
+  margin-left: 130px;
+  margin-top: 150px;
 }
 
 .item1 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
 }
 
 img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   transition: 1s;
 }
 

@@ -8,10 +8,13 @@ import { Component,  h, Host, Prop } from '@stencil/core';
 export class MyHeader {
 
   @Prop() headerTitel:string;
+  
+
+ 
 
   render() {
-    return (<Host>
-    
+    return (
+    <Host >
         <h1>{this.headerTitel}</h1>
         </Host>
     );
