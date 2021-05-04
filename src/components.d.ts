@@ -164,6 +164,16 @@ declare global {
     var HTMLMyPicturesElement: {
         prototype: HTMLMyPicturesElement;
         new (): HTMLMyPicturesElement;
+    }
+    var HTMLMyNavigationElement: {
+        prototype: HTMLMyNavigationElement;
+        new (): HTMLMyNavigationElement;
+    };
+    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
+    }
+    var HTMLMyPicturesElement: {
+        prototype: HTMLMyPicturesElement;
+        new (): HTMLMyPicturesElement;
     };
     interface HTMLMyScrollbuttonElement extends Components.MyScrollbutton, HTMLStencilElement {
     }
