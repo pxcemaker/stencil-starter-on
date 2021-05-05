@@ -12,33 +12,39 @@ export class MyAccordion {
   @Prop() accordText: string;
 
 
+
  clickHandler(ev: MouseEvent) {
     
     console.log(ev)
-    this.isOpen= false
+   
+    this.isOpen =true;
+    console.log(this.isOpen)
 
   }
+
+  clickHandler2(ev: MouseEvent) {
+    
+    console.log(ev)
+   
+    this.isOpen =false;
+    console.log(this.isOpen)
+
+  }
+
 
   render() {
     return (
       
-      <Host class={this.isOpen ? 'accordion' : 'hide'}>
-   <div class="accordion" onClick={(ev)=>this.clickHandler(ev)}>
+      <Host>
+        <my-button ques-opt="Wie lange hat unser ZOO offen und ist er für Schulklassen geeignet ?" onClick={(ev)=>this.clickHandler(ev)}></my-button>
+   <div class={this.isOpen ? 'accordion' : 'hide'} onClick={(ev)=>this.clickHandler2(ev)}>
        <p> {this.accordText}</p>
      </div>
+     
    
      </Host>
       
-      
-      
-      
-      
-      
-      /*div class={this.accOpen ? 'accordion' : 'panel'} onClick={(ev)=>this.exampleHandler2(ev)}> Section 1
-        <div class="panel">
-        <p>Lorem ipsum...</p>
-        </div>
-       </div>*/
+  
         
       
     );

@@ -21,6 +21,8 @@ export namespace Components {
         "accordText": string;
         "isOpen": boolean;
     }
+    interface MyAlertbutton {
+    }
     interface MyButton {
         "quesOpt": string;
     }
@@ -105,6 +107,12 @@ declare global {
     var HTMLMyAccordionElement: {
         prototype: HTMLMyAccordionElement;
         new (): HTMLMyAccordionElement;
+    };
+    interface HTMLMyAlertbuttonElement extends Components.MyAlertbutton, HTMLStencilElement {
+    }
+    var HTMLMyAlertbuttonElement: {
+        prototype: HTMLMyAlertbuttonElement;
+        new (): HTMLMyAlertbuttonElement;
     };
     interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
     }
@@ -194,6 +202,7 @@ declare global {
         "animal-card": HTMLAnimalCardElement;
         "example-component": HTMLExampleComponentElement;
         "my-accordion": HTMLMyAccordionElement;
+        "my-alertbutton": HTMLMyAlertbuttonElement;
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
@@ -225,6 +234,8 @@ declare namespace LocalJSX {
     interface MyAccordion {
         "accordText"?: string;
         "isOpen"?: boolean;
+    }
+    interface MyAlertbutton {
     }
     interface MyButton {
         "quesOpt"?: string;
@@ -295,6 +306,7 @@ declare namespace LocalJSX {
         "animal-card": AnimalCard;
         "example-component": ExampleComponent;
         "my-accordion": MyAccordion;
+        "my-alertbutton": MyAlertbutton;
         "my-button": MyButton;
         "my-component": MyComponent;
         "my-contact": MyContact;
@@ -318,6 +330,7 @@ declare module "@stencil/core" {
             "animal-card": LocalJSX.AnimalCard & JSXBase.HTMLAttributes<HTMLAnimalCardElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
+            "my-alertbutton": LocalJSX.MyAlertbutton & JSXBase.HTMLAttributes<HTMLMyAlertbuttonElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
