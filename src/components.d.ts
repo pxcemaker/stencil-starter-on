@@ -43,15 +43,18 @@ export namespace Components {
     interface MyCookie {
         "isopen": boolean;
     }
+    interface MyFlipcard {
+        "turn": boolean;
+    }
     interface MyFooter {
-        "Adresse": string;
-        "Datenschutz": string;
-        "Hausnummer": number;
-        "Impressum": string;
-        "Kontakt": string;
-        "Name": string;
-        "Postleitzahl": number;
-        "Stadt": string;
+        "adresse": string;
+        "datenschutz": string;
+        "hausnummer": number;
+        "impressum": string;
+        "kontakt": string;
+        "name": string;
+        "postleitzahl": number;
+        "stadt": string;
     }
     interface MyGallery {
     }
@@ -68,8 +71,6 @@ export namespace Components {
         "Informationen": string;
         "Kontakt": string;
         "Startseite": string;
-    }
-    interface MyPictures {
     }
     interface MyScrollbutton {
     }
@@ -129,6 +130,12 @@ declare global {
         prototype: HTMLMyCookieElement;
         new (): HTMLMyCookieElement;
     };
+    interface HTMLMyFlipcardElement extends Components.MyFlipcard, HTMLStencilElement {
+    }
+    var HTMLMyFlipcardElement: {
+        prototype: HTMLMyFlipcardElement;
+        new (): HTMLMyFlipcardElement;
+    };
     interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
     }
     var HTMLMyFooterElement: {
@@ -158,22 +165,6 @@ declare global {
     var HTMLMyNavigationElement: {
         prototype: HTMLMyNavigationElement;
         new (): HTMLMyNavigationElement;
-    };
-    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
-    }
-    var HTMLMyPicturesElement: {
-        prototype: HTMLMyPicturesElement;
-        new (): HTMLMyPicturesElement;
-    }
-    var HTMLMyNavigationElement: {
-        prototype: HTMLMyNavigationElement;
-        new (): HTMLMyNavigationElement;
-    };
-    interface HTMLMyPicturesElement extends Components.MyPictures, HTMLStencilElement {
-    }
-    var HTMLMyPicturesElement: {
-        prototype: HTMLMyPicturesElement;
-        new (): HTMLMyPicturesElement;
     };
     interface HTMLMyScrollbuttonElement extends Components.MyScrollbutton, HTMLStencilElement {
     }
@@ -207,12 +198,12 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-contact": HTMLMyContactElement;
         "my-cookie": HTMLMyCookieElement;
+        "my-flipcard": HTMLMyFlipcardElement;
         "my-footer": HTMLMyFooterElement;
         "my-gallery": HTMLMyGalleryElement;
         "my-header": HTMLMyHeaderElement;
         "my-links": HTMLMyLinksElement;
         "my-navigation": HTMLMyNavigationElement;
-        "my-pictures": HTMLMyPicturesElement;
         "my-scrollbutton": HTMLMyScrollbuttonElement;
         "my-section": HTMLMySectionElement;
         "my-slider": HTMLMySliderElement;
@@ -257,15 +248,18 @@ declare namespace LocalJSX {
     interface MyCookie {
         "isopen"?: boolean;
     }
+    interface MyFlipcard {
+        "turn"?: boolean;
+    }
     interface MyFooter {
-        "Adresse"?: string;
-        "Datenschutz"?: string;
-        "Hausnummer"?: number;
-        "Impressum"?: string;
-        "Kontakt"?: string;
-        "Name"?: string;
-        "Postleitzahl"?: number;
-        "Stadt"?: string;
+        "adresse"?: string;
+        "datenschutz"?: string;
+        "hausnummer"?: number;
+        "impressum"?: string;
+        "kontakt"?: string;
+        "name"?: string;
+        "postleitzahl"?: number;
+        "stadt"?: string;
     }
     interface MyGallery {
     }
@@ -282,8 +276,6 @@ declare namespace LocalJSX {
         "Informationen"?: string;
         "Kontakt"?: string;
         "Startseite"?: string;
-    }
-    interface MyPictures {
     }
     interface MyScrollbutton {
     }
@@ -307,12 +299,12 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "my-contact": MyContact;
         "my-cookie": MyCookie;
+        "my-flipcard": MyFlipcard;
         "my-footer": MyFooter;
         "my-gallery": MyGallery;
         "my-header": MyHeader;
         "my-links": MyLinks;
         "my-navigation": MyNavigation;
-        "my-pictures": MyPictures;
         "my-scrollbutton": MyScrollbutton;
         "my-section": MySection;
         "my-slider": MySlider;
@@ -330,12 +322,12 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-contact": LocalJSX.MyContact & JSXBase.HTMLAttributes<HTMLMyContactElement>;
             "my-cookie": LocalJSX.MyCookie & JSXBase.HTMLAttributes<HTMLMyCookieElement>;
+            "my-flipcard": LocalJSX.MyFlipcard & JSXBase.HTMLAttributes<HTMLMyFlipcardElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-gallery": LocalJSX.MyGallery & JSXBase.HTMLAttributes<HTMLMyGalleryElement>;
             "my-header": LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
             "my-links": LocalJSX.MyLinks & JSXBase.HTMLAttributes<HTMLMyLinksElement>;
             "my-navigation": LocalJSX.MyNavigation & JSXBase.HTMLAttributes<HTMLMyNavigationElement>;
-            "my-pictures": LocalJSX.MyPictures & JSXBase.HTMLAttributes<HTMLMyPicturesElement>;
             "my-scrollbutton": LocalJSX.MyScrollbutton & JSXBase.HTMLAttributes<HTMLMyScrollbuttonElement>;
             "my-section": LocalJSX.MySection & JSXBase.HTMLAttributes<HTMLMySectionElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
