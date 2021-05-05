@@ -1,10 +1,11 @@
 .gallery {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20%;
   grid-template-rows: 300px 3fr 200px;
   position: relative;
-  margin-left: 130px;
   margin-top: 150px;
+  width: 100%;
+  text-align: center;
 }
 
 .item1 {
@@ -16,6 +17,7 @@ img {
   width: 250px;
   height: 250px;
   transition: 1s;
+  margin-left: 60%;
 }
 
 img:hover {

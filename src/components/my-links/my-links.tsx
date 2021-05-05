@@ -7,8 +7,8 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class MyLinks {
 
-@Prop() text1:string = "aquarium";
-@Prop() text2:string = "tierpark";
+@Prop() text1:string;
+@Prop() text2:string ;
 
   render() {
     return (

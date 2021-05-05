@@ -3,6 +3,9 @@
 }
 body {
   background-color: #fff9e2;
+  width: 100%;
 }
 
-
+my-gallery {
+  position: relative;
+}

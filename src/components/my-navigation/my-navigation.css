@@ -1,27 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  color:white;
+  color: white;
 }
 
-nav{
+nav {
   width: 100%;
   height: 75%;
   background-color: darkkhaki;
   height: 75px;
   position: fixed;
   z-index: 1;
+  margin-top: -0.5%;
+  margin-left: -0.5%;
 }
 
-nav p{
+nav p {
   float: right;
   font-size: 18px;
   padding: 0px 25px;
-  margin:23px;
+  margin: 23px;
 }
 
 p:hover {

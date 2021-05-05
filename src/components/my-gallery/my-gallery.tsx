@@ -63,13 +63,7 @@ parseOptions() {
               <a href={this.items[1]}><img src={this.items[1]}></img></a>
             </div>
 
-            <div class="item1">
-              <a href={this.items[1]}><img src={this.items[1]}></img></a>
-            </div>
-            
-            <div class="item1">
-              <a href={this.items[1]}><img src={this.items[1]}></img></a>
-            </div>
+           
             
             
       </div>

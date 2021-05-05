@@ -11,7 +11,7 @@ export class MySlider {
   @Prop() image2:string = "nilpferd.jpg";
   @Prop() image3:string = "affe.jpg";
 
-  componentDidLoad() {
+  /*componentDidLoad() {
     let counter = 1;
     setInterval(function(){
       const currentBtn = document.getElementById("radio" + counter) as HTMLInputElement;
@@ -21,8 +21,7 @@ export class MySlider {
               counter = 1;
           }
       }, 3000);
-  }
-
+  }*/
   render() {
     return (
       <Host>
