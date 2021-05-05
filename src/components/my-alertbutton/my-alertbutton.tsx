@@ -8,7 +8,7 @@ import { Component, Host, h } from '@stencil/core';
 export class MyAlertbutton {
 
   makeAlert(){
-    alert("test");
+    alert("Ob geruhsam wie das Faultier, grazil wie die Giraffe oder flink wie ein Erdmännchen – im Zoo findet jeder ein passendes krabbelndes, kletterndes oder kriechendes Patentier.");
   }
 
   render() {
@@ -16,7 +16,7 @@ export class MyAlertbutton {
       <Host>
         <div class="alertButton">
           <button onClick={this.makeAlert}>
-            Test
+            Erfahre mehr über eine Tierpatenschaft!
           </button>
       </div>
       </Host>
