@@ -23,9 +23,7 @@ export class MyAccordion {
   }
 
   clickHandler2(ev: MouseEvent) {
-    
     console.log(ev)
-   
     this.isOpen =false;
     console.log(this.isOpen)
 

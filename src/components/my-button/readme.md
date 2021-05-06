@@ -16,11 +16,13 @@
 
 ### Used by
 
+ - [my-accordion](../my-accordion)
  - [my-cookie](../my-cookie)
 
 ### Graph
 ```mermaid
 graph TD;
+  my-accordion --> my-button
   my-cookie --> my-button
   style my-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
